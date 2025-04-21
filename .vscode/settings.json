@@ -1,0 +1,12 @@
+{
+    "C_Cpp.default.compilerPath": "C:\\src\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\\mingw64\\bin\\g++.exe",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.default.includePath": [
+      "${workspaceFolder}/include",
+      "C:/src/SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit/SFML-3.0.0/include"
+    ],
+    "terminal.integrated.env.windows": {
+      "PATH": "C:\\src\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\\mingw64\\bin;${env:PATH}"
+    }
+  }
+  
