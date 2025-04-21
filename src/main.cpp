@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include "CityGrid/CityGrid.hpp"
 
 int main()
 {
