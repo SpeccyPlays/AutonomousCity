@@ -6,6 +6,11 @@ int main()
     // create the window
     sf::RenderWindow window(sf::VideoMode({800, 600}), "My window");
 
+    constexpr unsigned int gridWidth = 20;
+    constexpr unsigned int gridHeight = 15;
+
+    AutonomousCity::CityGrid city(gridWidth, gridHeight);
+
     // run the program as long as the window is open
     while (window.isOpen())
     {
@@ -19,7 +24,7 @@ int main()
 
         // clear the window with black color
         window.clear(sf::Color::Black);
-
+        city.draw(window, 32.f);
         // draw everything here...
         // window.draw(...);
 
