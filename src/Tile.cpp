@@ -1,27 +1,15 @@
+// Tile.cpp
 #include "../include/CityGrid/Tile.hpp"
+#include "../include/assets/TextureManager.hpp"
+#include <iostream>
 
 namespace AutonomousCity {
 
-    Tile::Tile()
-        : type(TileType::Empty), state(TileState::Normal), texturePath("") {}
+    Tile::Tile(TextureManager* manager)
+    : type(TileType::Empty), state(TileState::Empty), texturePath(""), textureManager(manager) {}
 
-    Tile::Tile(TileType type, TileState state, const std::string& texturePath)
-        : type(type), state(state), texturePath(texturePath) {
-        setTexture(texturePath);
-    }
-
-    void Tile::setType(TileType newType) {
-        type = newType;
-    }
-
-    void Tile::setState(TileState newState) {
-        state = newState;
-    }
-
-    void Tile::setTexture(const std::string& path) {
-        texturePath = path;
-        texture.loadFromFile(texturePath); // will need error checking in the future
-    }
+    Tile::Tile(TileType type, TileState state, const std::string& texturePath, TextureManager* manager)
+        : type(type), state(state), texturePath(texturePath), textureManager(manager) {}
 
     TileType Tile::getType() const {
         return type;
@@ -31,12 +19,16 @@ namespace AutonomousCity {
         return state;
     }
 
-    const sf::Texture& Tile::getTexture() const {
-        return texture;
+    std::string Tile::getTexturePath() const {
+        return texturePath;
     }
 
-    const std::string& Tile::getTexturePath() const {
-        return texturePath;
+    const sf::Texture& Tile::getTexture() const {
+        return textureManager->getTexture(texturePath);
+    }
+
+    void Tile::setTexture(const std::string& texturePath) {
+        this->texturePath = texturePath;
     }
 
 }

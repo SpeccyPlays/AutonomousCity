@@ -2,43 +2,42 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
+#include "../include/assets/TextureManager.hpp"
 
 namespace AutonomousCity {
+    
+    enum class TileState {
+        Empty,
+        Wet,
+        Dry,
+        Oil,
+    };
 
     enum class TileType {
         Empty,
         Road,
         Pavement,
         Building,
-        TrafficLight
-    };
-
-    enum class TileState {
-        Normal,
-        Wet,
-        Oily
+        TrafficLight,
     };
 
     class Tile {
     public:
-        Tile();
-        Tile(TileType type, TileState state = TileState::Normal, const std::string& texturePath = "");
-
-        void setType(TileType newType);
-        void setState(TileState newState);
-        void setTexture(const std::string& path);
+        Tile(TextureManager* manager); // default tile
+        Tile(TileType type, TileState state, const std::string& texturePath, TextureManager* manager);
 
         TileType getType() const;
         TileState getState() const;
+        std::string getTexturePath() const;
         const sf::Texture& getTexture() const;
-        const std::string& getTexturePath() const;
+
+        void setTexture(const std::string& texturePath);
 
     private:
         TileType type;
         TileState state;
         std::string texturePath;
-
-        sf::Texture texture; // note: loads from file directly for now
+        TextureManager* textureManager;
     };
 
 }

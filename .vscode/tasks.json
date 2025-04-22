@@ -11,7 +11,8 @@
           "-IC:/src/SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit/SFML-3.0.0/include",
           "src/main.cpp", 
           "src/CityGrid.cpp",
-          "src/Tile.cpp", // add more source files here
+          "src/Tile.cpp",
+          "src/TextureManager.cpp",
           "-LC:/src/SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit/SFML-3.0.0/lib",
           "-lsfml-graphics",
           "-lsfml-window",
