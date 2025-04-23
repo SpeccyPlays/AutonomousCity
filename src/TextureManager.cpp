@@ -18,7 +18,6 @@ namespace AutonomousCity {
 
     // Empty or invalid path -> fallback
     if (path.empty()) {
-        std::cerr << "Warning: Empty texture path. Using fallback texture.\n";
         return fallbackTexture;
     }
     

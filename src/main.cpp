@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "CityGrid/CityGrid.hpp"
-
+#include <iostream>
 int main()
 {
     constexpr float tileSize = 32.f;
@@ -8,11 +8,18 @@ int main()
     constexpr unsigned int windowHeight = 600;
     constexpr unsigned int gridWidth = (int)windowWidth/tileSize;
     constexpr unsigned int gridHeight = (int)windowHeight/tileSize;
-    // create the window
+    std::string cityDataPath = "data/city.json";
+    std::filesystem::create_directories("data");
     sf::RenderWindow window(sf::VideoMode({windowWidth, windowHeight}), "My window");
-
     AutonomousCity::TextureManager textureManager;
     AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager);
+
+    if (city.loadFromFile(cityDataPath)){
+        std::cout << "City loaded from: " << cityDataPath << '\n';
+    }
+    else {
+        std::cerr << "Existing city not found at: " << cityDataPath << '\n';
+    }
 
     // run the program as long as the window is open
     while (window.isOpen())
@@ -46,5 +53,11 @@ int main()
 
         // end the current frame
         window.display();
+    }
+    if (city.saveToFile(cityDataPath)){
+        std::cout << "City saved to: " << cityDataPath << '\n';
+    }
+    else {
+        std::cerr << "Error saving city at: " << cityDataPath << '\n';
     }
 }

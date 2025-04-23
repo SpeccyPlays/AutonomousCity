@@ -13,6 +13,7 @@
           "src/CityGrid.cpp",
           "src/Tile.cpp",
           "src/TextureManager.cpp",
+          "src/Agents.cpp",
           "-LC:/src/SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit/SFML-3.0.0/lib",
           "-lsfml-graphics",
           "-lsfml-window",
