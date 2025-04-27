@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "CityGrid/CityGrid.hpp"
+#include "CityGrid/Tile.hpp"
 #include <iostream>
 int main()
 {
@@ -9,8 +10,9 @@ int main()
     constexpr unsigned int gridWidth = (int)windowWidth/tileSize;
     constexpr unsigned int gridHeight = (int)windowHeight/tileSize;
     std::string cityDataPath = "data/city.json";
+    const std::string roadPath = "include/assets/road.png";
     std::filesystem::create_directories("data");
-    sf::RenderWindow window(sf::VideoMode({windowWidth, windowHeight}), "My window");
+    sf::RenderWindow window(sf::VideoMode({windowWidth, windowHeight}), "Autonomous City");
     AutonomousCity::TextureManager textureManager;
     AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager);
 
@@ -31,19 +33,30 @@ int main()
             if (event->is<sf::Event::Closed>())
                 window.close();
         }
-        /** Preparation for adding tiles
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+        // Preparation for adding tiles
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
             sf::Vector2i pos = sf::Mouse::getPosition(window);
-            int x = pos.x / 32;
-            int y = pos.y / 32;
+            int x = (int) pos.x / tileSize;
+            int y = (int) pos.y / tileSize;
         
-            AnonymousCity::Tile newTile(
-                AnonymousCity::TileType::Road,
-                AnonymousCity::TileState::Normal,
-                "assets/road.png"
+            AutonomousCity::Tile newTile(
+                AutonomousCity::TileType::Road,
+                AutonomousCity::TileState::Empty,
+                roadPath,
+                &textureManager
             );
             city.setTile(x, y, newTile);
-        }*/
+        }
+        else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Right)){
+            sf::Vector2i pos = sf::Mouse::getPosition(window);
+            int x = (int) pos.x / tileSize;
+            int y = (int) pos.y / tileSize;
+        
+            AutonomousCity::Tile newTile(
+                &textureManager
+            );
+            city.setTile(x, y, newTile);
+        }
 
         // clear the window with black color
         window.clear(sf::Color::Black);
