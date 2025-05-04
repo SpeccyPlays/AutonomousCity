@@ -27,7 +27,7 @@ namespace AutonomousCity {
 
         void update();
         void locomotion(float deltaTime);
-        void slowDown();
+        void slowDown(float distance);
         void draw(sf::RenderWindow &window);
         bool collisionDetection(Cell* cell);
         void setState();

@@ -6,8 +6,8 @@ int main()
 {
     sf::Clock deltaClock;
     constexpr float tileSize = 32.f;
-    constexpr unsigned int windowWidth = 800;
-    constexpr unsigned int windowHeight = 600;
+    constexpr unsigned int windowWidth = 1280;
+    constexpr unsigned int windowHeight = 720;
     constexpr unsigned int gridWidth = (int)windowWidth/tileSize;
     constexpr unsigned int gridHeight = (int)windowHeight/tileSize;
     std::string cityDataPath = "data/city.json";
