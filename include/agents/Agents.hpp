@@ -4,14 +4,17 @@
 #include "../include/CityGrid/CityGrid.hpp"
 
 namespace AutonomousCity {
+    
     class Agent {
 
+        struct Cell; //forward declare this here to avoid build errors due to circular reference
         enum class AgentState {
-            wandering
+            wandering 
         };
 
         public:
-        Agent(sf::Vector2f pos, const std::string& texturePath);
+        Agent(sf::Vector2f pos, const std::string& texturePath, bool debugMode);
+        Agent(sf::Vector2f pos, bool debugMode);
         sf::Vector2f getCurrentPos() const;
         sf::Vector2f getVelocity() const;
         sf::Vector2f getAcceleration() const;
@@ -22,13 +25,16 @@ namespace AutonomousCity {
         sf::Vector2f setAcceleration(sf::Vector2f acceleration);
         sf::Vector2f setDesired();
 
-        void Agent::locomotion();
-        void Agent::slowDown();
-        bool Agent::collisionDetection(AutonomousCity::Cell* cell);
-        void Agent::setState();
-        AgentState Agent::getState() const;
+        void update();
+        void locomotion();
+        void slowDown();
+        void draw(sf::RenderWindow &window);
+        bool collisionDetection(Cell* cell);
+        void setState();
+        AgentState getState() const;
 
         private:
+        bool debugOn;
         sf::Vector2f currentPos;
         sf::Vector2f velocity;
         sf::Vector2f acceleration;

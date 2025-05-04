@@ -9,11 +9,11 @@
 
 namespace AutonomousCity
 {
-
+    class Agent;//forward declare this here to avoid build errors due to circular reference
     struct Cell
     {
         Tile tile;
-        std::unordered_set<Agent *> occupants;
+        std::unordered_set<AutonomousCity::Agent *> occupants;
         Cell(TextureManager *manager) : tile(manager) {}
     };
 

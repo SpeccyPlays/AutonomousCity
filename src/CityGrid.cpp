@@ -10,7 +10,6 @@ using json = nlohmann::json;
 
 namespace AutonomousCity
 {
-
     CityGrid::CityGrid(unsigned int w, unsigned int h, TextureManager &manager)
         : width(w), height(h), textureManager(manager)
     {

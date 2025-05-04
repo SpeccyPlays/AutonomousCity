@@ -16,6 +16,8 @@ int main()
     AutonomousCity::TextureManager textureManager;
     AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager);
 
+    AutonomousCity::Agent agent(sf::Vector2f(windowWidth/2, windowHeight/2), true);
+
     if (city.loadFromFile(cityDataPath)){
         std::cout << "City loaded from: " << cityDataPath << '\n';
     }
@@ -63,7 +65,7 @@ int main()
         city.draw(window, tileSize);
         // draw everything here...
         // window.draw(...);
-
+        agent.draw(window);
         // end the current frame
         window.display();
     }
