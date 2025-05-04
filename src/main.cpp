@@ -4,6 +4,7 @@
 #include <iostream>
 int main()
 {
+    sf::Clock deltaClock;
     constexpr float tileSize = 32.f;
     constexpr unsigned int windowWidth = 800;
     constexpr unsigned int windowHeight = 600;
@@ -16,7 +17,7 @@ int main()
     AutonomousCity::TextureManager textureManager;
     AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager);
 
-    AutonomousCity::Agent agent(sf::Vector2f(windowWidth/2, windowHeight/2), true);
+    AutonomousCity::Agent agent(sf::Vector2f(0, 0), true);
 
     if (city.loadFromFile(cityDataPath)){
         std::cout << "City loaded from: " << cityDataPath << '\n';
@@ -28,6 +29,7 @@ int main()
     // run the program as long as the window is open
     while (window.isOpen())
     {
+        float deltaTime = deltaClock.restart().asSeconds();
         // check all the window's events that were triggered since the last iteration of the loop
         while (const std::optional event = window.pollEvent())
         {
@@ -59,7 +61,9 @@ int main()
             );
             city.setTile(x, y, newTile);
         }
-
+        agent.setDesired(sf::Mouse::getPosition(window));
+        agent.setVelocity();
+        agent.locomotion(deltaTime);
         // clear the window with black color
         window.clear(sf::Color::Black);
         city.draw(window, tileSize);
@@ -68,11 +72,11 @@ int main()
         agent.draw(window);
         // end the current frame
         window.display();
-    }
+    };
     if (city.saveToFile(cityDataPath)){
         std::cout << "City saved to: " << cityDataPath << '\n';
     }
     else {
         std::cerr << "Error saving city at: " << cityDataPath << '\n';
-    }
+    };
 }

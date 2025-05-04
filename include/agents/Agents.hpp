@@ -20,13 +20,13 @@ namespace AutonomousCity {
         sf::Vector2f getAcceleration() const;
         sf::Vector2f getDesired() const;
 
-        sf::Vector2f setCurrentPos(sf::Vector2f pos);
-        sf::Vector2f setVelocity(sf::Vector2f velocity);
-        sf::Vector2f setAcceleration(sf::Vector2f acceleration);
-        sf::Vector2f setDesired();
+        void setCurrentPos(sf::Vector2f pos);
+        void setVelocity();
+        void setAcceleration(sf::Vector2f acceleration);
+        void setDesired(sf::Vector2i desired);
 
         void update();
-        void locomotion();
+        void locomotion(float deltaTime);
         void slowDown();
         void draw(sf::RenderWindow &window);
         bool collisionDetection(Cell* cell);
@@ -43,5 +43,6 @@ namespace AutonomousCity {
         float maxspeed;
         float wanderingDistance;
         AgentState agentState;
+
     };
 }
