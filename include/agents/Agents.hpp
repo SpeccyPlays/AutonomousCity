@@ -30,6 +30,7 @@ namespace AutonomousCity {
 
         void update(sf::Vector2i desired);
         void wandering();
+        void addWander();
         void locomotion(float deltaTime);
         void slowDown();
         void draw();

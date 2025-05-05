@@ -12,13 +12,13 @@ namespace AutonomousCity {
         currentPos = pos;
         debugOn = debugMode;
         mass = 10;
-        maxspeed = 10;
-        wanderingDistance = 20;
-        steeringForce = 0.05;
+        maxspeed = 100;
+        wanderingDistance = 3.f;
+        steeringForce = 5.f;
         agentState = AgentState::Wandering;
         window = renderWindow;
         velocity = {0.f, 0.f};
-        accelerationRate = 10.f;
+        accelerationRate = 5.f;
         currentSpeed = 0.f;
     };
    Agent::Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height, bool debugMode)
@@ -28,30 +28,29 @@ namespace AutonomousCity {
         debugOn = debugMode;
         mass = 10;
         maxspeed = 100;
-        wanderingDistance = 20;
-        steeringForce = 0.05;
+        wanderingDistance = 3.f;
+        steeringForce = 5.f;
         agentState = AgentState::Wandering;
         window = renderWindow;
         velocity = {0.f, 0.f};
-        accelerationRate = 10.f;
+        accelerationRate = 5.f;
         currentSpeed = 0.f;
     };
     void Agent::update(sf::Vector2i desired){
         float speedLimit = maxspeed;
-        switch(agentState){
-            case AgentState::Wandering:
-                wandering();
-                break;
-            default:
-                setDesired(desired);
-                break;
-        }
         if (checkBoundary()){
-            slowDown();
+            //slowDown();
+            speedLimit = currentSpeed * 0.8;
             setDesired(static_cast<sf::Vector2i>(currentPos + velocity));
-        } 
+        }
+        else if (agentState == AgentState::Wandering){
+            addWander();
+        }
         setVelocity(speedLimit);
     }
+    /**
+     * Not used any more but could be helpful in future
+     */
     void Agent::wandering(){
         sf::Vector2f tempDesired = currentPos + (velocity * maxspeed);
         //all this to generate a random angle and distance
@@ -65,6 +64,13 @@ namespace AutonomousCity {
         tempDesired.x += distance * cos(radians);
         tempDesired.y += distance * sin(radians);
         setDesired(static_cast<sf::Vector2i>(tempDesired));
+        
+    }
+    void Agent::addWander(){
+        std::random_device randomDistance;
+        std::uniform_real_distribution<float> dist(-wanderingDistance, wanderingDistance);
+        sf::Vector2f wanderAmount = {dist(randomDistance), dist(randomDistance)};
+        setDesired(static_cast<sf::Vector2i>(currentPos + velocity + wanderAmount));
     }
     bool Agent::checkBoundary(){
         bool willhitBoundary = false;
@@ -72,19 +78,19 @@ namespace AutonomousCity {
         sf::Vector2f steeringCorrection = {0.f, 0.f};
         sf::Vector2f nextPos = currentPos + velocity;
         if (nextPos.x < boundary){
-            steeringCorrection.x += 10.f;           
+            steeringCorrection.x += steeringForce;           
             willhitBoundary = true;
         }
         else if (nextPos.x > windowWidth - boundary){
-            steeringCorrection.x += -10.f;
+            steeringCorrection.x += -steeringForce;
             willhitBoundary = true;
         }
         if (nextPos.y < boundary){     
-            steeringCorrection.y += 10.f;
+            steeringCorrection.y += steeringForce;
             willhitBoundary = true;
         }
         else if (nextPos.y > windowHeight - boundary){
-            steeringCorrection.y += -10.f;
+            steeringCorrection.y += -steeringForce;
             willhitBoundary = true;
         }
         velocity += steeringCorrection;
