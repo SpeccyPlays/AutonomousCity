@@ -17,7 +17,7 @@ int main()
     AutonomousCity::TextureManager textureManager;
     AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager);
 
-    AutonomousCity::Agent agent(sf::Vector2f(windowWidth /2 , windowHeight / 2), true);
+    AutonomousCity::Agent agent(sf::Vector2f(windowWidth /2 , windowHeight / 2), &window, windowWidth, windowHeight, true);
 
     if (city.loadFromFile(cityDataPath)){
         std::cout << "City loaded from: " << cityDataPath << '\n';
@@ -61,14 +61,14 @@ int main()
             );
             city.setTile(x, y, newTile);
         }
-        agent.update(sf::Mouse::getPosition(window), window);
+        agent.update(sf::Mouse::getPosition(window));
         agent.locomotion(deltaTime);
         // clear the window with black color
         window.clear(sf::Color::Black);
         city.draw(window, tileSize);
         // draw everything here...
         // window.draw(...);
-        agent.draw(window);
+        agent.draw();
         // end the current frame
         window.display();
     };

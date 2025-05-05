@@ -276,8 +276,8 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "type": 1,
       "x": 39,
       "y": 0
     },
