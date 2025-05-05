@@ -9,7 +9,7 @@ namespace AutonomousCity {
 
         struct Cell; //forward declare this here to avoid build errors due to circular reference
         enum class AgentState {
-            wandering 
+            WANDERING
         };
 
         public:
@@ -21,11 +21,14 @@ namespace AutonomousCity {
         sf::Vector2f getDesired() const;
 
         void setCurrentPos(sf::Vector2f pos);
+        void addVelocity(sf::Vector2f toAdd);
+        sf::Vector2f limitVector(sf::Vector2f vectorToLimit, float limitValue);
         void setVelocity();
         void setAcceleration(sf::Vector2f acceleration);
         void setDesired(sf::Vector2i desired);
 
-        void update();
+        void update(sf::Vector2i desired, sf::RenderWindow &window);
+        void wandering(sf::RenderWindow &window);
         void locomotion(float deltaTime);
         void slowDown(float distance);
         void draw(sf::RenderWindow &window);
@@ -42,6 +45,7 @@ namespace AutonomousCity {
         unsigned int mass;
         float maxspeed;
         float wanderingDistance;
+        float steeringForce;
         AgentState agentState;
 
     };

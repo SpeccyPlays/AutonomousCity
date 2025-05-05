@@ -1,6 +1,8 @@
 #include "../include/agents/Agents.hpp"
 #include <SFML/Graphics.hpp>
 #include "../include/CityGrid/CityGrid.hpp"
+#include <random>
+
 
 namespace AutonomousCity {
 
@@ -9,13 +11,52 @@ namespace AutonomousCity {
         debugOn = debugMode;
         mass = 10;
         maxspeed = 10;
+        wanderingDistance = 20;
+        steeringForce = 0.05;
     };
    Agent::Agent(sf::Vector2f pos, bool debugMode){
         currentPos = pos;
         debugOn = debugMode;
         mass = 10;
         maxspeed = 100;
+        wanderingDistance = 20;
+        steeringForce = 0.05;
+        agentState = AgentState::WANDERING;
     };
+    void Agent::update(sf::Vector2i desired, sf::RenderWindow &window){
+        switch(agentState){
+            case AgentState::WANDERING:
+                wandering(window);
+                break;
+            default:
+                setDesired(desired);
+                break;
+        }
+        setVelocity();
+
+    }
+    void Agent::wandering(sf::RenderWindow &window){
+        sf::Vector2f tempDesired = currentPos + (velocity * maxspeed);
+        //all this to generate a random angle and distance
+        std::random_device randomAngle;
+        std::uniform_real_distribution<float> angleRange(0.0f, 360.0f);
+        sf::Angle angle = sf::degrees(angleRange(randomAngle));
+        float radians = angle.asRadians();
+        std::random_device randomDistance;
+        std::uniform_real_distribution<float> dist(50.0f, 100.0f);
+        float distance = dist(randomDistance);
+        if (debugOn){
+            sf::Color lineColor(255, 255, 255);
+            sf::Vector2f endPoint = tempDesired + sf::Vector2f({distance, distance});
+            std::array<sf::Vertex, 2> line = {
+                sf::Vertex{sf::Vector2f(currentPos), lineColor},
+                sf::Vertex{sf::Vector2f(endPoint), lineColor}};
+            window.draw(line.data(), line.size(), sf::PrimitiveType::Lines);
+        }
+        tempDesired.x += distance * cos(radians);
+        tempDesired.y += distance * sin(radians);
+        setDesired(static_cast<sf::Vector2i>(tempDesired));
+    }
     void Agent::draw(sf::RenderWindow &window){
         sf::CircleShape agent(mass/ 2);
         agent.setOrigin({mass /2, mass / 2});
@@ -49,6 +90,12 @@ namespace AutonomousCity {
     void Agent::setDesired(sf::Vector2i desired){
         desiredPos = static_cast<sf::Vector2f>(desired);
     };
+    void Agent::addVelocity(sf::Vector2f toAdd){
+        velocity += toAdd;
+    }
+    sf::Vector2f Agent::limitVector(sf::Vector2f vectorToLimit, float limitValue){
+        return vectorToLimit.normalized() * limitValue;
+    }
     void Agent::setVelocity(){
         sf::Vector2f difference = desiredPos - currentPos;
         float distance = difference.length();
