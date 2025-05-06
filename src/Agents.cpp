@@ -39,7 +39,6 @@ namespace AutonomousCity {
     void Agent::update(sf::Vector2i desired){
         float speedLimit = maxspeed;
         if (checkBoundary()){
-            //slowDown();
             speedLimit = currentSpeed * 0.8;
             setDesired(static_cast<sf::Vector2i>(currentPos + velocity));
         }
