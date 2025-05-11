@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "CityGrid/CityGrid.hpp"
 #include "CityGrid/Tile.hpp"
+#include "../include/agents/AgentController.hpp"
 #include <iostream>
 int main()
 {
@@ -14,10 +15,10 @@ int main()
     const std::string roadPath = "include/assets/road.png";
     std::filesystem::create_directories("data");
     sf::RenderWindow window(sf::VideoMode({windowWidth, windowHeight}), "Autonomous City");
+    
     AutonomousCity::TextureManager textureManager;
     AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager);
-
-    AutonomousCity::Agent agent(sf::Vector2f(windowWidth /2 , windowHeight / 2), &window, windowWidth, windowHeight, true);
+    AutonomousCity::AgentController agents(10, &city, windowWidth, windowHeight, &window);
 
     if (city.loadFromFile(cityDataPath)){
         std::cout << "City loaded from: " << cityDataPath << '\n';
@@ -61,14 +62,11 @@ int main()
             );
             city.setTile(x, y, newTile);
         }
-        agent.update(sf::Mouse::getPosition(window));
-        agent.locomotion(deltaTime);
         // clear the window with black color
         window.clear(sf::Color::Black);
         city.draw(window, tileSize);
-        // draw everything here...
-        // window.draw(...);
-        agent.draw();
+        //draw agents last so they're on top of the grid
+        agents.run(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)), deltaTime);
         // end the current frame
         window.display();
     };

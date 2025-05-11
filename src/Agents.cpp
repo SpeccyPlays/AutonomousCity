@@ -13,7 +13,7 @@ namespace AutonomousCity {
         debugOn = debugMode;
         mass = 10;
         maxspeed = 100;
-        wanderingDistance = 3.f;
+        wanderingDistance = 10.f;
         steeringForce = 5.f;
         agentState = AgentState::Wandering;
         window = renderWindow;
@@ -35,12 +35,14 @@ namespace AutonomousCity {
         velocity = {0.f, 0.f};
         accelerationRate = 5.f;
         currentSpeed = 0.f;
+        rngSeed = std::mt19937(std::random_device{}());
+        wanderDist = std::uniform_real_distribution<float>(-wanderingDistance, wanderingDistance);
     };
-    void Agent::update(sf::Vector2i desired){
+    void Agent::update(sf::Vector2f desired){
         float speedLimit = maxspeed;
         if (checkBoundary()){
             speedLimit = currentSpeed * 0.8;
-            setDesired(static_cast<sf::Vector2i>(currentPos + velocity));
+            setDesired(currentPos + velocity);
         }
         else if (agentState == AgentState::Wandering){
             addWander();
@@ -62,14 +64,12 @@ namespace AutonomousCity {
         float distance = dist(randomDistance);
         tempDesired.x += distance * cos(radians);
         tempDesired.y += distance * sin(radians);
-        setDesired(static_cast<sf::Vector2i>(tempDesired));
+        setDesired(tempDesired);
         
     }
     void Agent::addWander(){
-        std::random_device randomDistance;
-        std::uniform_real_distribution<float> dist(-wanderingDistance, wanderingDistance);
-        sf::Vector2f wanderAmount = {dist(randomDistance), dist(randomDistance)};
-        setDesired(static_cast<sf::Vector2i>(currentPos + velocity + wanderAmount));
+        sf::Vector2f wanderAmount = {wanderDist(rngSeed), wanderDist(rngSeed)};
+        setDesired(currentPos + velocity + wanderAmount);
     }
     bool Agent::checkBoundary(){
         bool willhitBoundary = false;
@@ -125,8 +125,8 @@ namespace AutonomousCity {
     void Agent::locomotion(float deltaTime){
         currentPos += velocity * deltaTime;
     };
-    void Agent::setDesired(sf::Vector2i desired){
-        desiredPos = static_cast<sf::Vector2f>(desired);
+    void Agent::setDesired(sf::Vector2f desired){
+        desiredPos = desired;
     };
     void Agent::addVelocity(sf::Vector2f toAdd){
         velocity += toAdd;
@@ -158,4 +158,10 @@ namespace AutonomousCity {
         }
         velocity = velocity * currentSpeed;
     };
+    sf::Vector2f Agent::getCurrentPos() const {
+        return currentPos;
+    }
+    sf::Vector2f Agent::getVelocity() const {
+        return velocity;
+    }
 }

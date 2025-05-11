@@ -6,12 +6,25 @@
 
 namespace AutonomousCity {
     
-    AgentController::AgentController(int amountOfAgents, CityGrid *cityGrid, sf::RenderWindow *renderWindow){
-        agents.resize(amountOfAgents);
+    AgentController::AgentController(int amountOfAgents, CityGrid *cityGrid, const unsigned int &width, const unsigned int &height, sf::RenderWindow *renderWindow){
+        //agents.resize(amountOfAgents);
         grid = cityGrid;
         window = renderWindow;
         debugOn = false;
+        //need to use begin and end so i is correct type for vector ilitorator 
+        for (int i = 0; i < amountOfAgents; i++){
+            AutonomousCity::Agent agent(sf::Vector2f(width /2 , height / 2), window, width, height, true);
+            agents.emplace_back(agent);
+        }
     };
+    void AgentController::run(sf::Vector2f desired, float deltaTime){
+        for (Agent& agent : agents){
+            //do some stuff
+            agent.update(desired);
+            agent.locomotion(deltaTime);
+            agent.draw();
+        };
+    }
     void AgentController::setDebug(bool debug){
         debugOn = debug;
     };
@@ -19,18 +32,18 @@ namespace AutonomousCity {
         return debugOn;
     };
     void AgentController::update(){
-        for (Agent agent : agents){
+        for (Agent& agent : agents){
             //do some stuff
         };
     };
     void AgentController::locomotion(){
         //Move the ants
-        for (Agent agent : agents){
+        for (Agent& agent : agents){
             //do some stuff
         };
     }
     void AgentController::draw(){
-        for (Agent agent : agents){
+        for (Agent& agent : agents){
             //do some stuff
             sf::CircleShape obj(5);
             obj.setOrigin({5, 5});

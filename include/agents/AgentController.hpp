@@ -9,9 +9,10 @@ namespace AutonomousCity {
     
     class AgentController {
         struct Cell;
-        AgentController(int amountOfAgents, CityGrid *cityGrid, sf::RenderWindow *renderWindow);
-
+        
         public:
+            AgentController(int amountOfAgents, CityGrid *cityGrid, const unsigned int &width, const unsigned int &height, sf::RenderWindow *renderWindow);
+            void run(sf::Vector2f desired, float deltaTime); //remove later, used for intial tests
             void update();
             void draw();
             void locomotion();

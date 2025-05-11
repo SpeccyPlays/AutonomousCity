@@ -2,6 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "../include/CityGrid/CityGrid.hpp"
+#include <random>
 
 namespace AutonomousCity {
     
@@ -26,9 +27,9 @@ namespace AutonomousCity {
         sf::Vector2f limitVector(sf::Vector2f vectorToLimit, float limitValue);
         void setVelocity(float speedLimit);
         void setAcceleration(sf::Vector2f acceleration);
-        void setDesired(sf::Vector2i desired);
+        void setDesired(sf::Vector2f desired);
 
-        void update(sf::Vector2i desired);
+        void update(sf::Vector2f desired);
         void wandering();
         void addWander();
         void locomotion(float deltaTime);
@@ -55,5 +56,8 @@ namespace AutonomousCity {
         sf::RenderWindow *window;
         const unsigned int &windowWidth;
         const unsigned int &windowHeight;
+        //used for random wandering
+        std::mt19937 rngSeed;
+        std::uniform_real_distribution<float> wanderDist;
     };
 }
