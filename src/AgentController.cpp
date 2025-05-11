@@ -3,6 +3,7 @@
 #include "../include/agents/Agents.hpp"
 #include "../include/agents/AgentController.hpp"
 #include <vector>
+#include <iostream>
 
 namespace AutonomousCity {
     
@@ -20,9 +21,17 @@ namespace AutonomousCity {
     void AgentController::run(sf::Vector2f desired, float deltaTime){
         for (Agent& agent : agents){
             //do some stuff
-            agent.update(desired);
+            sf::Vector2i startingGridPos = grid->getGridPos(agent.getCurrentPos());
+            agent.update(desired);//desired is not actually used
             agent.locomotion(deltaTime);
+            sf::Vector2i endingGridPos = grid->getGridPos(agent.getCurrentPos());
             agent.draw();
+            if (startingGridPos != endingGridPos){
+                //we've changed cell so update
+                if (!grid->removeAgent(&agent, startingGridPos) || !grid->addAgent(&agent, endingGridPos)){
+                    std::cerr << "Agent probably off the grid" << std::endl;
+                }
+            }
         };
     }
     void AgentController::setDebug(bool debug){

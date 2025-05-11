@@ -14,23 +14,23 @@ namespace AutonomousCity
         : width(w), height(h), textureManager(manager)
     {
         grid.resize(height, std::vector<Cell>(width, Cell(&textureManager)));
-    }
+    };
 
     void CityGrid::setTile(unsigned int x, unsigned int y, const Tile &tile)
     {
         if (y < height && x < width)
             grid[y][x].tile = tile;
-    }
+    };
 
     const Tile &CityGrid::getTile(unsigned int x, unsigned int y) const
     {
         return grid[y][x].tile;
-    }
+    };
 
     Tile &CityGrid::getTile(unsigned int x, unsigned int y)
     {
         return grid[y][x].tile;
-    }
+    };
 
     unsigned int CityGrid::getWidth() const { return width; }
     unsigned int CityGrid::getHeight() const { return height; }
@@ -67,8 +67,26 @@ namespace AutonomousCity
                 sf::Vertex{sf::Vector2f(width * tileSize, y * tileSize), lineColor}};
             window.draw(line.data(), line.size(), sf::PrimitiveType::Lines);
         }
-    }
-
+    };
+    sf::Vector2i CityGrid::getGridPos(sf::Vector2f agentPos){
+        return static_cast<sf::Vector2i>(agentPos / 32.f);
+    };
+    bool CityGrid::addAgent(Agent *agent, sf::Vector2i gridPos){
+        if (gridPos.y < 0 || gridPos.x < 0 || gridPos.y >= height || gridPos.x >= width){
+            //we're off the grid somehow
+            return false;
+        }
+        grid[gridPos.y][gridPos.x].occupants.insert(agent); 
+        return true;
+    };
+    bool CityGrid::removeAgent(Agent *agent, sf::Vector2i gridPos){
+        if (gridPos.y < 0 || gridPos.x < 0 || gridPos.y >= height || gridPos.x >= width){
+            //we're off the grid somehow
+            return false;
+        }
+        grid[gridPos.y][gridPos.x].occupants.erase(agent);
+        return true;
+    };
     bool CityGrid::saveToFile(const std::string &filename) const
     {
         json j;
@@ -93,7 +111,7 @@ namespace AutonomousCity
             return false;
         file << j.dump(2);
         return true;
-    }
+    };
 
     bool CityGrid::loadFromFile(const std::string &filename)
     {
@@ -119,5 +137,5 @@ namespace AutonomousCity
         }
 
         return true;
-    }
-}
+    };
+};

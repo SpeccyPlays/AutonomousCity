@@ -31,9 +31,12 @@ namespace AutonomousCity
         unsigned int getWidth() const;
         unsigned int getHeight() const;
 
+        sf::Vector2i getGridPos(sf::Vector2f agentPos);
+
         bool saveToFile(const std::string &filename) const;
         bool loadFromFile(const std::string &filename);
-
+        bool addAgent(Agent *agent, sf::Vector2i gridPos);
+        bool removeAgent(Agent *agent, sf::Vector2i gridPos);
     private:
         unsigned int width;
         unsigned int height;
