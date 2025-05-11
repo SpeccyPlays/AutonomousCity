@@ -22,15 +22,16 @@ namespace AutonomousCity {
         sf::Vector2f getAcceleration() const;
         sf::Vector2f getDesired() const;
 
-        void setCurrentPos(sf::Vector2f pos);
         void addVelocity(sf::Vector2f toAdd);
         sf::Vector2f limitVector(sf::Vector2f vectorToLimit, float limitValue);
-        void setVelocity(float speedLimit);
-        void setAcceleration(sf::Vector2f acceleration);
+        void setVelocity();
+        void accelerate();
         void setDesired(sf::Vector2f desired);
+        void setAngle(float angle);
+        float getAngle() const;
+        void addSteering(float amount);
 
         void update(sf::Vector2f desired);
-        void wandering();
         void addWander();
         void locomotion(float deltaTime);
         void slowDown();
@@ -46,6 +47,7 @@ namespace AutonomousCity {
         sf::Vector2f velocity;
         sf::Vector2f acceleration;
         sf::Vector2f desiredPos;
+        float angle;
         unsigned int mass;
         float maxspeed;
         float currentSpeed;
@@ -59,5 +61,6 @@ namespace AutonomousCity {
         //used for random wandering
         std::mt19937 rngSeed;
         std::uniform_real_distribution<float> wanderDist;
+        std::uniform_real_distribution<float> randomAngle;
     };
 }
