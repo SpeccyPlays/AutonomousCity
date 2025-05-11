@@ -8,6 +8,7 @@ namespace AutonomousCity {
 
     class TextureManager {
     public:
+        const sf::Texture& getTexture(const std::string& path, float tileSize);
         const sf::Texture& getTexture(const std::string& path);
 
     private:

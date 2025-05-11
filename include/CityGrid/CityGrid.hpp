@@ -20,9 +20,9 @@ namespace AutonomousCity
     class CityGrid
     {
     public:
-        CityGrid(unsigned int width, unsigned int height, TextureManager &textureManager);
+        CityGrid(unsigned int width, unsigned int height, TextureManager &textureManager, float tileSize);
 
-        void draw(sf::RenderWindow &window, float tileSize) const;
+        void draw(sf::RenderWindow &window) const;
 
         void setTile(unsigned int x, unsigned int y, const Tile &tile);
         const Tile &getTile(unsigned int x, unsigned int y) const;
@@ -41,6 +41,7 @@ namespace AutonomousCity
     private:
         unsigned int width;
         unsigned int height;
+        float tileSize;
         std::vector<std::vector<Cell>> grid;
         TextureManager &textureManager;
     };

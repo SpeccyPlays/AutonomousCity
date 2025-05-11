@@ -72,10 +72,10 @@ namespace AutonomousCity {
             sprite.setOrigin(origin);
             sprite.setPosition(agent.getCurrentPos());
             sprite.setRotation(sf::radians(agent.getAngle()));
-            window->draw(sprite);
             if (debugOn){
                 drawLine(agent.getCurrentPos(), agent.getCurrentPos() + agent.getVelocity());
             };
+            window->draw(sprite);
         };
     };
     bool AgentController::checkBoundary(Agent &agent){

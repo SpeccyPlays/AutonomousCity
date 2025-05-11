@@ -17,7 +17,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode({windowWidth, windowHeight}), "Autonomous City");
     
     AutonomousCity::TextureManager textureManager;
-    AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager);
+    AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager, tileSize);
     AutonomousCity::AgentController agents(50, &city, windowWidth, windowHeight, &window, textureManager);
 
     if (city.loadFromFile(cityDataPath)){
@@ -48,7 +48,8 @@ int main()
                 AutonomousCity::TileType::Road,
                 AutonomousCity::TileState::Empty,
                 roadPath,
-                &textureManager
+                &textureManager,
+                tileSize
             );
             city.setTile(x, y, newTile);
         }
@@ -64,7 +65,7 @@ int main()
         }
         // clear the window with black color
         window.clear(sf::Color::Black);
-        city.draw(window, tileSize);
+        city.draw(window);
         //draw agents last so they're on top of the grid
         agents.run(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)), deltaTime);
         agents.draw();

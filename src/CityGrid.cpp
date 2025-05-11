@@ -10,10 +10,11 @@ using json = nlohmann::json;
 
 namespace AutonomousCity
 {
-    CityGrid::CityGrid(unsigned int w, unsigned int h, TextureManager &manager)
+    CityGrid::CityGrid(unsigned int w, unsigned int h, TextureManager &manager, float tileSize)
         : width(w), height(h), textureManager(manager)
     {
         grid.resize(height, std::vector<Cell>(width, Cell(&textureManager)));
+        this->tileSize = tileSize;
     };
 
     void CityGrid::setTile(unsigned int x, unsigned int y, const Tile &tile)
@@ -35,7 +36,7 @@ namespace AutonomousCity
     unsigned int CityGrid::getWidth() const { return width; }
     unsigned int CityGrid::getHeight() const { return height; }
 
-    void CityGrid::draw(sf::RenderWindow &window, float tileSize) const
+    void CityGrid::draw(sf::RenderWindow &window) const
     {
         for (unsigned int y = 0; y < height; ++y)
         {
@@ -69,7 +70,7 @@ namespace AutonomousCity
         }
     };
     sf::Vector2i CityGrid::getGridPos(sf::Vector2f agentPos){
-        return static_cast<sf::Vector2i>(agentPos / 32.f);
+        return static_cast<sf::Vector2i>(agentPos / tileSize);
     };
     Cell& CityGrid::getCell(sf::Vector2i gridPos){
         return grid[gridPos.y][gridPos.x];
@@ -95,6 +96,7 @@ namespace AutonomousCity
         json j;
         j["width"] = width;
         j["height"] = height;
+        j["tileSize"] = tileSize;
 
         for (unsigned int y = 0; y < height; ++y)
         {
@@ -105,7 +107,8 @@ namespace AutonomousCity
                                       {"y", y},
                                       {"type", static_cast<int>(tile.getType())},
                                       {"state", static_cast<int>(tile.getState())},
-                                      {"texture", tile.getTexturePath()}});
+                                      {"texture", tile.getTexturePath()},
+                                    {"tileSize", tile.getTileSize()}});
             }
         }
 
@@ -127,6 +130,7 @@ namespace AutonomousCity
 
         width = j["width"];
         height = j["height"];
+        tileSize = j["tileSize"];
         grid = std::vector<std::vector<Cell>>(height, std::vector<Cell>(width, Cell(&textureManager)));
 
         for (const auto &entry : j["tiles"])
@@ -136,7 +140,8 @@ namespace AutonomousCity
             TileType type = static_cast<TileType>(entry["type"]);
             TileState state = static_cast<TileState>(entry["state"]);
             std::string texture = entry["texture"];
-            grid[y][x].tile = Tile(type, state, texture, &textureManager);
+            float tileSize = entry["tileSize"];
+            grid[y][x].tile = Tile(type, state, texture, &textureManager, tileSize);
         }
 
         return true;
