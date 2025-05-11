@@ -67,6 +67,7 @@ int main()
         city.draw(window, tileSize);
         //draw agents last so they're on top of the grid
         agents.run(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)), deltaTime);
+        agents.draw();
         // end the current frame
         window.display();
     };

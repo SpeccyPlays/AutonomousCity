@@ -6,31 +6,33 @@
 #include <iostream>
 
 namespace AutonomousCity {
-    
-    AgentController::AgentController(int amountOfAgents, CityGrid *cityGrid, const unsigned int &width, const unsigned int &height, sf::RenderWindow *renderWindow){
+
+    AgentController::AgentController(int amountOfAgents, CityGrid *cityGrid, const unsigned int pxWidth, const unsigned int pxHeight, sf::RenderWindow *renderWindow){
         //agents.resize(amountOfAgents);
         grid = cityGrid;
         window = renderWindow;
-        debugOn = false;
-        //need to use begin and end so i is correct type for vector ilitorator 
+        debugOn = true;
+        width = pxWidth;
+        height = pxHeight;
         for (int i = 0; i < amountOfAgents; i++){
-            AutonomousCity::Agent agent(sf::Vector2f(width /2 , height / 2), window, width, height, true);
+            AutonomousCity::Agent agent(sf::Vector2f(width /2 , height / 2), window, width, height);
             agents.emplace_back(agent);
         }
     };
     void AgentController::run(sf::Vector2f desired, float deltaTime){
         for (Agent& agent : agents){
-            //do some stuff
+            if (!checkBoundary(agent)){
+                agent.addWander();
+            };
             agent.update(desired, deltaTime);//desired is not actually used
             sf::Vector2i startingGridPos = grid->getGridPos(agent.getDesired());
             AutonomousCity::Cell& currentCell = grid->getCell(startingGridPos);
             if (currentCell.occupants.size() > 0){
                 agent.slowDown();
-            }
-            
+            };
             agent.locomotion(deltaTime);
             sf::Vector2i endingGridPos = grid->getGridPos(agent.getCurrentPos());
-            agent.draw();
+            //agent.draw();
             if (startingGridPos != endingGridPos){
                 //we've changed cell so update
                 AutonomousCity::Cell& newCell = grid->getCell(endingGridPos);
@@ -70,13 +72,39 @@ namespace AutonomousCity {
             obj.setFillColor(sf::Color::Transparent);
             window->draw(obj);
             if (debugOn){
-                sf::Color lineColor(255, 255, 255);
-                sf::Vector2f endPoint = agent.getCurrentPos() + agent.getVelocity();
-                std::array<sf::Vertex, 2> line = {
-                    sf::Vertex{sf::Vector2f(agent.getCurrentPos()), lineColor},
-                    sf::Vertex{sf::Vector2f(endPoint), lineColor}};
-                window->draw(line.data(), line.size(), sf::PrimitiveType::Lines);
+                drawLine(agent.getCurrentPos(), agent.getCurrentPos() + agent.getVelocity());
             };
         };
     };
+    bool AgentController::checkBoundary(Agent &agent){
+        bool willhitBoundary = false;
+        int boundary = 20;
+        sf::Vector2f nextPos = agent.getCurrentPos() + agent.getVelocity();
+        float steeringAmount = 0.05;
+        if (nextPos.x < boundary){
+            agent.addSteering(steeringAmount);     
+            willhitBoundary = true;
+        }
+        else if (nextPos.x > width - boundary){
+            agent.addSteering(steeringAmount);
+            willhitBoundary = true;
+        }
+        if (nextPos.y < boundary){     
+            agent.addSteering(steeringAmount);
+            willhitBoundary = true;
+        }
+        else if (nextPos.y > height - boundary){
+            agent.addSteering(steeringAmount);
+            willhitBoundary = true;
+        }
+        return willhitBoundary;
+    };
+    void AgentController::drawLine(sf::Vector2f start, sf::Vector2f end){
+         sf::Color lineColor(255, 255, 255);
+         std::array<sf::Vertex, 2> line = {
+            sf::Vertex{sf::Vector2f(start), lineColor},
+            sf::Vertex{sf::Vector2f(end), lineColor}
+         };
+         window->draw(line.data(), line.size(), sf::PrimitiveType::Lines);
+    }
 }

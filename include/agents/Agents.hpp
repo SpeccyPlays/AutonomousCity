@@ -15,8 +15,8 @@ namespace AutonomousCity {
         };
 
         public:
-        Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height, const std::string& texturePath, bool debugMode);
-        Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height, bool debugMode);
+        Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height, const std::string& texturePath);
+        Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height);
         sf::Vector2f getCurrentPos() const;
         sf::Vector2f getVelocity() const;
         sf::Vector2f getAcceleration() const;
@@ -35,10 +35,6 @@ namespace AutonomousCity {
         void addWander();
         void locomotion(float deltaTime);
         void slowDown();
-        void draw();
-        bool checkBoundary();
-        bool collisionDetection(Cell* cell);
-        void setState();
         AgentState getState() const;
 
         private:
