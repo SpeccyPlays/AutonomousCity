@@ -7,7 +7,8 @@
 
 namespace AutonomousCity {
 
-    AgentController::AgentController(int amountOfAgents, CityGrid *cityGrid, const unsigned int pxWidth, const unsigned int pxHeight, sf::RenderWindow *renderWindow){
+    AgentController::AgentController(int amountOfAgents, CityGrid *cityGrid, const unsigned int pxWidth, const unsigned int pxHeight, sf::RenderWindow *renderWindow, TextureManager &manager)
+    : textureManager(manager){
         //agents.resize(amountOfAgents);
         grid = cityGrid;
         window = renderWindow;
@@ -64,13 +65,14 @@ namespace AutonomousCity {
     }
     void AgentController::draw(){
         for (Agent& agent : agents){
-            //do some stuff
-            sf::CircleShape obj(5);
-            obj.setOrigin({5, 5});
-            obj.setOutlineThickness(2);
-            obj.setPosition(agent.getCurrentPos());
-            obj.setFillColor(sf::Color::Transparent);
-            window->draw(obj);
+            const sf::Texture &texture = textureManager.getTexture(agent.getTexturePath());
+            sf::Sprite sprite(texture);
+            sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
+            sf::Vector2f origin({size.x /2, size.y /2});
+            sprite.setOrigin(origin);
+            sprite.setPosition(agent.getCurrentPos());
+            sprite.setRotation(sf::radians(agent.getAngle()));
+            window->draw(sprite);
             if (debugOn){
                 drawLine(agent.getCurrentPos(), agent.getCurrentPos() + agent.getVelocity());
             };

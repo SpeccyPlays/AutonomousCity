@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "../include/CityGrid/CityGrid.hpp"
 #include <random>
+#include <string>
 
 namespace AutonomousCity {
     
@@ -15,7 +16,6 @@ namespace AutonomousCity {
         };
 
         public:
-        Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height, const std::string& texturePath);
         Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height);
         sf::Vector2f getCurrentPos() const;
         sf::Vector2f getVelocity() const;
@@ -36,6 +36,7 @@ namespace AutonomousCity {
         void locomotion(float deltaTime);
         void slowDown();
         AgentState getState() const;
+        std::string getTexturePath() const;
 
         private:
         bool debugOn;
@@ -52,6 +53,7 @@ namespace AutonomousCity {
         float steeringForce;
         AgentState agentState;
         sf::RenderWindow *window;
+        std::string texturePath;
         const unsigned int &windowWidth;
         const unsigned int &windowHeight;
         //used for random wandering

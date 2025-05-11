@@ -6,20 +6,6 @@
 
 namespace AutonomousCity {
 
-    Agent::Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height, const std::string& texturePath)
-    :windowWidth(width), windowHeight(height)
-    {
-        currentPos = pos;
-        mass = 10;
-        maxspeed = 100;
-        wanderingDistance = 10.f;
-        steeringForce = 5.f;
-        agentState = AgentState::Wandering;
-        window = renderWindow;
-        velocity = {0.f, 0.f};
-        accelerationRate = maxspeed / 2;
-        currentSpeed = 0.f;
-    };
    Agent::Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height)
     :windowWidth(width), windowHeight(height)
    {
@@ -37,6 +23,7 @@ namespace AutonomousCity {
         wanderDist = std::uniform_real_distribution<float>(-wanderingDistance, wanderingDistance);
         std::uniform_real_distribution<float> angleDist(-1.5708f, 1.5708f);
         angle = angleDist(rngSeed);
+        texturePath = "include/assets/car.png";
 
     };
     void Agent::update(sf::Vector2f desired, float deltaTime){
@@ -97,4 +84,7 @@ namespace AutonomousCity {
     float Agent::getAngle() const{
         return angle;
     };
+    std::string Agent::getTexturePath() const{
+        return texturePath;
+    }
 }

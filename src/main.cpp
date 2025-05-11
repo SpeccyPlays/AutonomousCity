@@ -18,7 +18,7 @@ int main()
     
     AutonomousCity::TextureManager textureManager;
     AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager);
-    AutonomousCity::AgentController agents(50, &city, windowWidth, windowHeight, &window);
+    AutonomousCity::AgentController agents(50, &city, windowWidth, windowHeight, &window, textureManager);
 
     if (city.loadFromFile(cityDataPath)){
         std::cout << "City loaded from: " << cityDataPath << '\n';
