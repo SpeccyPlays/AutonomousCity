@@ -109,17 +109,6 @@ namespace AutonomousCity {
                 sf::Vertex{sf::Vector2f(currentPos), lineColor},
                 sf::Vertex{sf::Vector2f(endPoint), lineColor}};
             window->draw(line.data(), line.size(), sf::PrimitiveType::Lines);
-            sf::Font font("include/assets/arial.ttf"); 
-            sf::Text text(font);
-            float x = 0.f;
-            float y = 0.f;
-            text.setPosition({x, y});
-            text.setCharacterSize(18);
-            text.setFillColor(sf::Color::Red);
-            std::stringstream ss;
-            ss << "Current pos: (" << (int)currentPos.x << ", " << (int)currentPos.y << ") Desired pos: (" << (int)desiredPos.x << ", " << (int)desiredPos.y << ")";
-            text.setString(ss.str());
-            window->draw(text);
         };
     };
     void Agent::locomotion(float deltaTime){
@@ -154,7 +143,7 @@ namespace AutonomousCity {
     void Agent::slowDown(){
         currentSpeed -= accelerationRate;
         if (currentSpeed < 0){
-            currentSpeed = 0.f;
+            currentSpeed = 5.f;
         }
         velocity = velocity * currentSpeed;
     };

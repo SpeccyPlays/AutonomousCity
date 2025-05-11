@@ -71,6 +71,9 @@ namespace AutonomousCity
     sf::Vector2i CityGrid::getGridPos(sf::Vector2f agentPos){
         return static_cast<sf::Vector2i>(agentPos / 32.f);
     };
+    Cell& CityGrid::getCell(sf::Vector2i gridPos){
+        return grid[gridPos.y][gridPos.x];
+    }
     bool CityGrid::addAgent(Agent *agent, sf::Vector2i gridPos){
         if (gridPos.y < 0 || gridPos.x < 0 || gridPos.y >= height || gridPos.x >= width){
             //we're off the grid somehow
