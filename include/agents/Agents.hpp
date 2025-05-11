@@ -25,13 +25,13 @@ namespace AutonomousCity {
         void addVelocity(sf::Vector2f toAdd);
         sf::Vector2f limitVector(sf::Vector2f vectorToLimit, float limitValue);
         void setVelocity();
-        void accelerate();
+        void accelerate(float deltaTime);
         void setDesired(sf::Vector2f desired);
         void setAngle(float angle);
         float getAngle() const;
         void addSteering(float amount);
 
-        void update(sf::Vector2f desired);
+        void update(sf::Vector2f desired, float deltaTime);
         void addWander();
         void locomotion(float deltaTime);
         void slowDown();

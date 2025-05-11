@@ -21,12 +21,13 @@ namespace AutonomousCity {
     void AgentController::run(sf::Vector2f desired, float deltaTime){
         for (Agent& agent : agents){
             //do some stuff
-            sf::Vector2i startingGridPos = grid->getGridPos(agent.getCurrentPos());
+            agent.update(desired, deltaTime);//desired is not actually used
+            sf::Vector2i startingGridPos = grid->getGridPos(agent.getDesired());
             AutonomousCity::Cell& currentCell = grid->getCell(startingGridPos);
-            if (currentCell.occupants.size() > 1){
+            if (currentCell.occupants.size() > 0){
                 agent.slowDown();
             }
-            agent.update(desired);//desired is not actually used
+            
             agent.locomotion(deltaTime);
             sf::Vector2i endingGridPos = grid->getGridPos(agent.getCurrentPos());
             agent.draw();

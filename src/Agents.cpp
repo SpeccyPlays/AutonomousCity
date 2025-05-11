@@ -18,7 +18,7 @@ namespace AutonomousCity {
         agentState = AgentState::Wandering;
         window = renderWindow;
         velocity = {0.f, 0.f};
-        accelerationRate = 5.f;
+        accelerationRate = maxspeed / 2;
         currentSpeed = 0.f;
     };
    Agent::Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height, bool debugMode)
@@ -28,12 +28,12 @@ namespace AutonomousCity {
         debugOn = debugMode;
         mass = 10;
         maxspeed = 100;
-        wanderingDistance = 0.02f;
+        wanderingDistance = 0.01f;
         steeringForce = 5.f;
         agentState = AgentState::Wandering;
         window = renderWindow;
         velocity = {0.f, 0.f};
-        accelerationRate = 0.5f;
+        accelerationRate = 5.f;
         currentSpeed = 0.f;
         rngSeed = std::mt19937(std::random_device{}());
         wanderDist = std::uniform_real_distribution<float>(-wanderingDistance, wanderingDistance);
@@ -41,17 +41,18 @@ namespace AutonomousCity {
         angle = angleDist(rngSeed);
 
     };
-    void Agent::update(sf::Vector2f desired){
+    void Agent::update(sf::Vector2f desired, float deltaTime){
         float speedLimit = maxspeed;
         if (checkBoundary()){
-            slowDown();
+            //slowDown();
         }
         else if (agentState == AgentState::Wandering){
             addWander();
         }
-        accelerate();
+        accelerate(deltaTime);
         setVelocity();
-        setDesired(currentPos + velocity);
+        sf::Vector2f desiredPos = currentPos + velocity * deltaTime;
+        setDesired(desiredPos);
     }
     void Agent::addWander(){
         sf::Vector2f wanderAmount = {wanderDist(rngSeed), wanderDist(rngSeed)};
@@ -63,7 +64,7 @@ namespace AutonomousCity {
         float boundary = maxspeed / 2;
         sf::Vector2f steeringCorrection = {0.f, 0.f};
         sf::Vector2f nextPos = currentPos + velocity;
-        float steeringAmount = 0.02;
+        float steeringAmount = 0.05;
         if (nextPos.x < boundary){
             addSteering(steeringAmount);     
             willhitBoundary = true;
@@ -101,6 +102,9 @@ namespace AutonomousCity {
     void Agent::locomotion(float deltaTime){
         currentPos += velocity * deltaTime;
     };
+    sf::Vector2f Agent::getDesired() const {
+        return desiredPos;
+    }
     void Agent::setDesired(sf::Vector2f desired){
         desiredPos = desired;
     };
@@ -127,8 +131,8 @@ namespace AutonomousCity {
     sf::Vector2f Agent::getVelocity() const {
         return velocity;
     }
-    void Agent::accelerate(){
-        currentSpeed += accelerationRate;
+    void Agent::accelerate(float deltaTime){
+        currentSpeed += (accelerationRate * deltaTime);
         if (currentSpeed > maxspeed){
             currentSpeed = maxspeed;
         }
