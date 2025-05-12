@@ -76,7 +76,7 @@ namespace AutonomousCity
         return grid[gridPos.y][gridPos.x];
     }
     bool CityGrid::addAgent(Agent *agent, sf::Vector2i gridPos){
-        if (gridPos.y < 0 || gridPos.x < 0 || gridPos.y >= height || gridPos.x >= width){
+        if (gridPos.y < 0 || gridPos.x < 0 || gridPos.y > height || gridPos.x > width){
             //we're off the grid somehow
             return false;
         }
@@ -84,7 +84,7 @@ namespace AutonomousCity
         return true;
     };
     bool CityGrid::removeAgent(Agent *agent, sf::Vector2i gridPos){
-        if (gridPos.y < 0 || gridPos.x < 0 || gridPos.y >= height || gridPos.x >= width){
+        if (gridPos.y < 0 || gridPos.x < 0 || gridPos.y > height || gridPos.x > width){
             //we're off the grid somehow
             return false;
         }

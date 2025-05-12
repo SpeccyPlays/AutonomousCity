@@ -87,4 +87,7 @@ namespace AutonomousCity {
     std::string Agent::getTexturePath() const{
         return texturePath;
     }
+    const float Agent::getCurrentSpeed() const {
+        return currentSpeed;
+    }
 }
