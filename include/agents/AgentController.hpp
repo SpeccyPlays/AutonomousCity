@@ -29,5 +29,6 @@ namespace AutonomousCity {
             unsigned int height;
             bool debugOn;
             void drawLine(sf::Vector2f start, sf::Vector2f end);
+            void drawCollisionBox(Agent agent);
     };
 };
