@@ -20,6 +20,7 @@ namespace AutonomousCity {
             void setDebug(bool debug);
             bool getDebug() const;
             bool checkBoundary(Agent& agent);
+            bool checkRight(Agent& agent);
         private:
             std::vector<Agent> agents;
             CityGrid* grid;
@@ -29,6 +30,7 @@ namespace AutonomousCity {
             unsigned int height;
             bool debugOn;
             void drawLine(sf::Vector2f start, sf::Vector2f end);
-            void drawCollisionBox(Agent agent);
+            void drawCollisionBox(Agent* agent);
+            void obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants);
     };
 };

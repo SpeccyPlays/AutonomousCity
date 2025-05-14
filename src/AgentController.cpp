@@ -31,10 +31,7 @@ namespace AutonomousCity {
             if (!grid->removeAgent(&agent, startingGridPos)){
                 std::cerr << "Agent probably off the grid" << std::endl;
             };
-            if (currentCell.occupants.size() > 1 && agent.getCurrentSpeed() > 10){
-                drawCollisionBox(agent);
-                agent.slowDown();
-            };
+            obsticleDetections(&agent, currentCell.occupants);
             if (checkBoundary(agent)){
                 agent.slowDown();
                 agent.addWander();
@@ -75,8 +72,7 @@ namespace AutonomousCity {
             sprite.setPosition(agent.getCurrentPos());
             sprite.setRotation(sf::radians(agent.getAngle()));
             if (debugOn){
-                drawLine(agent.getCurrentPos(), agent.getCurrentPos() + agent.getVelocity());
-                 sf::Font font("include/assets/arial.ttf"); 
+                sf::Font font("include/assets/arial.ttf"); 
                 sf::Text text(font);
                 float x = 0.f;
                 float y = yPos;
@@ -117,22 +113,22 @@ namespace AutonomousCity {
             sf::Vertex{sf::Vector2f(end), lineColor}
          };
          window->draw(line.data(), line.size(), sf::PrimitiveType::Lines);
-    }
-    void AgentController::drawCollisionBox(Agent agent){
+    };
+    void AgentController::drawCollisionBox(Agent* agent){
         //get the texture size so we know how big to draw the box
-        const sf::Texture &texture = textureManager.getTexture(agent.getTexturePath());
+        const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
         sf::Sprite sprite(texture);
         sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
         sf::Vector2f origin({size.x /2, size.y /2});
         //work out where to start drawing
-        float angle = agent.getAngle();
+        float angle = agent->getAngle();
         sf::Vector2f distance({0, 0});
         //Calculate distance
         float x = std::cos(angle) * size.x; //the textures are facing to the right so x is height
         float y = std::sin(angle) * size.x;
         distance.x = x;
         distance.y = y;
-        sf::Vector2f start = agent.getCurrentPos() + distance;
+        sf::Vector2f start = agent->getCurrentPos() + distance;
         //Set up the shape
         sf::Color lineColor(255,0,0);
         sf::RectangleShape rectangle({size.x, size.y});
@@ -140,9 +136,54 @@ namespace AutonomousCity {
         rectangle.setFillColor(sf::Color::Transparent);
         rectangle.setOutlineThickness(2.f);
         rectangle.setOutlineColor(lineColor);
-        rectangle.setRotation(sf::radians(agent.getAngle()));
+        rectangle.setRotation(sf::radians(agent->getAngle()));
         rectangle.setOrigin(origin);
         //draw
         window->draw(rectangle);
-    }
-}
+    };
+    void AgentController::obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants){
+        //no need to continue if no other agents
+        if (occupants.size() <= 1){
+            return;
+        };
+        unsigned int multiplier = 2;//we want to at least look our agent size at front but better if increased
+        float angleOffset = 0.523599f;//also used for detection later
+        const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
+        sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
+        sf::Vector2f distance({0, 0});
+        float angle = agent->getAngle();
+        sf::Vector2f currentPos = agent->getCurrentPos();
+        
+        if (debugOn){
+            //only calculate left and right positions if we need to
+            sf::Vector2f forward({std::cos(angle) * size.x * multiplier, std::sin(angle) * size.x * multiplier});
+            sf::Vector2f left({std::cos(angle - angleOffset) * size.x * multiplier, std::sin(angle - angleOffset) * size.x * multiplier});
+            sf::Vector2f right ({std::cos(angle + angleOffset) * size.x * multiplier, std::sin(angle + angleOffset) * size.x * multiplier});
+            forward += currentPos;
+            left += currentPos;
+            right += currentPos;
+            drawLine(currentPos, forward);
+            drawLine(currentPos, left);
+            drawLine(currentPos, right);
+        };
+        for (auto occupant : occupants){
+            if (agent != occupant){
+                sf::Vector2f occupantPos = occupant->getCurrentPos();
+                sf::Vector2f toOccupant = occupantPos - currentPos;//already have agent current position
+                
+                float distance = std::sqrt(toOccupant.x * toOccupant.x + toOccupant.y * toOccupant.y);
+                sf::Vector2f toOccupantDir = toOccupant / distance; // normalize
+
+                float dotProduct = currentPos.x * toOccupantDir.x + currentPos.y * toOccupantDir.y;
+                //remove current speed in future once all agents don't start in the middle
+                if (dotProduct >= angleOffset && distance < size.x * multiplier){
+                    drawCollisionBox(agent);
+                    
+                }
+                if (agent->getCurrentSpeed() > 20){
+                    agent->slowDown();
+                }
+            };
+        };
+    };
+};
