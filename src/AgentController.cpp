@@ -143,8 +143,8 @@ namespace AutonomousCity {
         window->draw(rectangle);
     };
     void AgentController::obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants){
-        //no need to continue if no other agents
-        if (occupants.size() <= 1){
+        //no need to continue if no other agents - the passed in agent has been removed already
+        if (occupants.size() < 1){
             return;
         };
         unsigned int multiplier = 2;//we want to at least look our agent size at front but better if increased
