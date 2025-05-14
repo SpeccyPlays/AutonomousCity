@@ -31,11 +31,12 @@ namespace AutonomousCity {
             if (!grid->removeAgent(&agent, startingGridPos)){
                 std::cerr << "Agent probably off the grid" << std::endl;
             };
-            obsticleDetections(&agent, currentCell.occupants);
             if (checkBoundary(agent)){
                 agent.slowDown();
+            } else {
                 agent.addWander();
             };
+            obsticleDetections(&agent, currentCell.occupants);
             agent.update(desired, deltaTime);//desired is not actually used
             agent.locomotion(deltaTime);
             sf::Vector2i endingGridPos = grid->getGridPos(agent.getCurrentPos());
@@ -166,22 +167,25 @@ namespace AutonomousCity {
             drawLine(currentPos, left);
             drawLine(currentPos, right);
         };
+        //chatgpt did the maths for this part
+        sf::Vector2f forwardDir = { std::cos(angle), std::sin(angle) };
+        float cosThreshold = std::cos(angleOffset);
         for (auto occupant : occupants){
             if (agent != occupant){
                 sf::Vector2f occupantPos = occupant->getCurrentPos();
                 sf::Vector2f toOccupant = occupantPos - currentPos;//already have agent current position
                 
                 float distance = std::sqrt(toOccupant.x * toOccupant.x + toOccupant.y * toOccupant.y);
-                sf::Vector2f toOccupantDir = toOccupant / distance; // normalize
+                sf::Vector2f toOccupantDir = toOccupant / distance;
 
-                float dotProduct = currentPos.x * toOccupantDir.x + currentPos.y * toOccupantDir.y;
-                //remove current speed in future once all agents don't start in the middle
-                if (dotProduct >= angleOffset && distance < size.x * multiplier){
+                float dotProduct = forwardDir.x * toOccupantDir.x + forwardDir.y * toOccupantDir.y;
+                
+                if (dotProduct >= cosThreshold && distance < size.x * multiplier){
                     drawCollisionBox(agent);
-                    
-                }
-                if (agent->getCurrentSpeed() > 20){
-                    agent->slowDown();
+                    //remove current speed in future once all agents don't start in the middle
+                    if (agent->getCurrentSpeed() > 20){
+                        agent->slowDown();
+                    }
                 }
             };
         };
