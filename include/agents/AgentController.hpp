@@ -32,5 +32,6 @@ namespace AutonomousCity {
             void drawLine(sf::Vector2f start, sf::Vector2f end);
             void drawCollisionBox(Agent* agent);
             void obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants);
+            std::array<sf::Vector2f, 3> getDirectionalPoints(Agent* agent);
     };
 };

@@ -72,7 +72,7 @@ namespace AutonomousCity {
             sprite.setOrigin(origin);
             sprite.setPosition(agent.getCurrentPos());
             sprite.setRotation(sf::radians(agent.getAngle()));
-            if (debugOn){
+            /*if (debugOn){
                 sf::Font font("include/assets/arial.ttf"); 
                 sf::Text text(font);
                 float x = 0.f;
@@ -88,7 +88,7 @@ namespace AutonomousCity {
                 ss << "Start: (" << startingGridPos.x << ", " << startingGridPos.y << ") Occupants: " << startCount << " Desired grid pos: (" << endingGridPos.x << ", " << endingGridPos.y << ") Occupants: " << desiredCount;
                 text.setString(ss.str());
                 window->draw(text);
-            };
+            };*/
             yPos += 20.f;
             if (yPos > height){
                 yPos = 0;
@@ -99,8 +99,14 @@ namespace AutonomousCity {
     bool AgentController::checkBoundary(Agent &agent){
         bool willhitBoundary = false;
         int boundary = 20;
-        sf::Vector2f nextPos = agent.getCurrentPos() + agent.getVelocity();
-        if (nextPos.x < boundary || nextPos.x > width - boundary || nextPos.y < boundary || nextPos.y > height - boundary){
+
+        auto [forward, left, right] = getDirectionalPoints(&agent);
+        /*if (nextPos.x < boundary || nextPos.x > width - boundary || nextPos.y < boundary || nextPos.y > height - boundary){
+            float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
+            agent.addSteering(steeringAmount);     
+            willhitBoundary = true;
+        };*/
+        if (forward.x < boundary || forward.x > width - boundary || forward.y < boundary || forward.y > height - boundary){
             float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
             agent.addSteering(steeringAmount);     
             willhitBoundary = true;
@@ -157,12 +163,7 @@ namespace AutonomousCity {
         
         if (debugOn){
             //only calculate left and right positions if we need to
-            sf::Vector2f forward({std::cos(angle) * size.x * multiplier, std::sin(angle) * size.x * multiplier});
-            sf::Vector2f left({std::cos(angle - angleOffset) * size.x * multiplier, std::sin(angle - angleOffset) * size.x * multiplier});
-            sf::Vector2f right ({std::cos(angle + angleOffset) * size.x * multiplier, std::sin(angle + angleOffset) * size.x * multiplier});
-            forward += currentPos;
-            left += currentPos;
-            right += currentPos;
+            auto [forward, left, right] = getDirectionalPoints(agent);
             drawLine(currentPos, forward);
             drawLine(currentPos, left);
             drawLine(currentPos, right);
@@ -176,6 +177,10 @@ namespace AutonomousCity {
                 sf::Vector2f toOccupant = occupantPos - currentPos;//already have agent current position
                 
                 float distance = std::sqrt(toOccupant.x * toOccupant.x + toOccupant.y * toOccupant.y);
+                //avoid dividing by 0
+                if (distance == 0.f){
+                     continue;
+                }
                 sf::Vector2f toOccupantDir = toOccupant / distance;
 
                 float dotProduct = forwardDir.x * toOccupantDir.x + forwardDir.y * toOccupantDir.y;
@@ -183,11 +188,34 @@ namespace AutonomousCity {
                 if (dotProduct >= cosThreshold && distance < size.x * multiplier){
                     drawCollisionBox(agent);
                     //remove current speed in future once all agents don't start in the middle
-                    if (agent->getCurrentSpeed() > 20){
+                    if (agent->getCurrentSpeed() > 5){
                         agent->slowDown();
                     }
                 }
             };
+        };
+    };
+    std::array<sf::Vector2f, 3> AgentController::getDirectionalPoints(Agent* agent){
+        /**
+         * These 3 directions will be used quite often for boundary & obsticle checking
+         */
+        unsigned int multiplier = 2;//we want to at least look our agent size at front but better if increased
+        float angleOffset = 0.523599f;//also used for detection later
+        const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
+        sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
+        sf::Vector2f distance({0, 0});
+        float angle = agent->getAngle();
+        sf::Vector2f currentPos = agent->getCurrentPos();
+        sf::Vector2f forward({std::cos(angle) * size.x * multiplier, std::sin(angle) * size.x * multiplier});
+        sf::Vector2f left({std::cos(angle - angleOffset) * size.x * multiplier, std::sin(angle - angleOffset) * size.x * multiplier});
+        sf::Vector2f right ({std::cos(angle + angleOffset) * size.x * multiplier, std::sin(angle + angleOffset) * size.x * multiplier});
+        forward += currentPos;
+        left += currentPos;
+        right += currentPos;
+        return {
+            forward,
+            left,
+            right,
         };
     };
 };
