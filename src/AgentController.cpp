@@ -184,7 +184,7 @@ namespace AutonomousCity {
 
                 float dotProduct = forwardDir.x * toOccupantDir.x + forwardDir.y * toOccupantDir.y;
                 
-                if (dotProduct >= cosThreshold && distance < size.x * multiplier){
+                if (dotProduct >= cosThreshold && distance < multiplier){
                     drawCollisionBox(agent);
                     //remove current speed in future once all agents don't start in the middle
                     if (agent->getCurrentSpeed() > 5){
@@ -222,6 +222,6 @@ namespace AutonomousCity {
          */
         float lookAheadAmount = 0.02f;
 
-        return (currentSpeed * lookAheadAmount) + size;
+        return (currentSpeed * lookAheadAmount) + size * 2; //need double the size distance so agents don't overlap
     };
 };
