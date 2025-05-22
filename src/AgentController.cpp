@@ -31,12 +31,12 @@ namespace AutonomousCity {
             if (!grid->removeAgent(&agent, startingGridPos)){
                 std::cerr << "Agent probably off the grid" << std::endl;
             };
-            if (checkBoundary(agent)){
+            if (checkBoundary(agent, deltaTime)){
                 agent.slowDown();
             } else {
                 agent.addWander();
             };
-            obsticleDetections(&agent, currentCell.occupants);
+            obsticleDetections(&agent, currentCell.occupants, deltaTime);
             agent.update(desired, deltaTime);//desired is not actually used
             agent.locomotion(deltaTime);
             sf::Vector2i endingGridPos = grid->getGridPos(agent.getCurrentPos());
@@ -96,11 +96,11 @@ namespace AutonomousCity {
             window->draw(sprite);
         };
     };
-    bool AgentController::checkBoundary(Agent &agent){
+    bool AgentController::checkBoundary(Agent &agent, float deltaTime){
         bool willhitBoundary = false;
         int boundary = 20;
 
-        auto [forward, left, right] = getDirectionalPoints(&agent);
+        auto [forward, left, right] = getDirectionalPoints(&agent, deltaTime);
         /*if (nextPos.x < boundary || nextPos.x > width - boundary || nextPos.y < boundary || nextPos.y > height - boundary){
             float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
             agent.addSteering(steeringAmount);     
@@ -148,22 +148,21 @@ namespace AutonomousCity {
         //draw
         window->draw(rectangle);
     };
-    void AgentController::obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants){
+    void AgentController::obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants, float deltaTime){
         //no need to continue if no other agents - the passed in agent has been removed already
         if (occupants.size() < 1){
             return;
         };
-        unsigned int multiplier = 2;//we want to at least look our agent size at front but better if increased
         float angleOffset = 0.523599f;//also used for detection later
         const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
         sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
-        sf::Vector2f distance({0, 0});
+        float multiplier = calcLookAheadMultipler(agent->getCurrentSpeed(), size.x);
         float angle = agent->getAngle();
         sf::Vector2f currentPos = agent->getCurrentPos();
         
         if (debugOn){
             //only calculate left and right positions if we need to
-            auto [forward, left, right] = getDirectionalPoints(agent);
+            auto [forward, left, right] = getDirectionalPoints(agent, deltaTime);
             drawLine(currentPos, forward);
             drawLine(currentPos, left);
             drawLine(currentPos, right);
@@ -195,20 +194,19 @@ namespace AutonomousCity {
             };
         };
     };
-    std::array<sf::Vector2f, 3> AgentController::getDirectionalPoints(Agent* agent){
+    std::array<sf::Vector2f, 3> AgentController::getDirectionalPoints(Agent* agent, float deltaTime){
         /**
          * These 3 directions will be used quite often for boundary & obsticle checking
          */
-        unsigned int multiplier = 2;//we want to at least look our agent size at front but better if increased
         float angleOffset = 0.523599f;//also used for detection later
         const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
         sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
-        sf::Vector2f distance({0, 0});
+        float multiplier = calcLookAheadMultipler(agent->getCurrentSpeed(), size.x);
         float angle = agent->getAngle();
         sf::Vector2f currentPos = agent->getCurrentPos();
-        sf::Vector2f forward({std::cos(angle) * size.x * multiplier, std::sin(angle) * size.x * multiplier});
-        sf::Vector2f left({std::cos(angle - angleOffset) * size.x * multiplier, std::sin(angle - angleOffset) * size.x * multiplier});
-        sf::Vector2f right ({std::cos(angle + angleOffset) * size.x * multiplier, std::sin(angle + angleOffset) * size.x * multiplier});
+        sf::Vector2f forward({std::cos(angle) * multiplier, std::sin(angle) * multiplier});
+        sf::Vector2f left({std::cos(angle - angleOffset) * multiplier, std::sin(angle - angleOffset) * multiplier});
+        sf::Vector2f right ({std::cos(angle + angleOffset) * multiplier, std::sin(angle + angleOffset) * multiplier});
         forward += currentPos;
         left += currentPos;
         right += currentPos;
@@ -217,5 +215,13 @@ namespace AutonomousCity {
             left,
             right,
         };
+    };
+    float AgentController::calcLookAheadMultipler(float currentSpeed, float size){
+        /**
+         * For collision detection, we want to be looking ahead at least the size amount, further depending on speed
+         */
+        float lookAheadAmount = 0.02f;
+
+        return (currentSpeed * lookAheadAmount) + size;
     };
 };

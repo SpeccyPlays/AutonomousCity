@@ -19,8 +19,7 @@ namespace AutonomousCity {
             void locomotion();
             void setDebug(bool debug);
             bool getDebug() const;
-            bool checkBoundary(Agent& agent);
-            bool checkRight(Agent& agent);
+            bool checkBoundary(Agent& agent, float deltaTime);
         private:
             std::vector<Agent> agents;
             CityGrid* grid;
@@ -31,7 +30,8 @@ namespace AutonomousCity {
             bool debugOn;
             void drawLine(sf::Vector2f start, sf::Vector2f end);
             void drawCollisionBox(Agent* agent);
-            void obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants);
-            std::array<sf::Vector2f, 3> getDirectionalPoints(Agent* agent);
+            void obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants, float deltaTime);
+            std::array<sf::Vector2f, 3> getDirectionalPoints(Agent* agent, float deltaTime);
+            float calcLookAheadMultipler(float currentSpeed, float size);
     };
 };
