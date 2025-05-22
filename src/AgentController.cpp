@@ -36,7 +36,7 @@ namespace AutonomousCity {
             } else {
                 agent.addWander();
             };
-            obsticleDetections(&agent, currentCell.occupants, deltaTime);
+            obsticleDetections(&agent, currentCell.occupants);
             agent.update(desired, deltaTime);//desired is not actually used
             agent.locomotion(deltaTime);
             sf::Vector2i endingGridPos = grid->getGridPos(agent.getCurrentPos());
@@ -100,7 +100,7 @@ namespace AutonomousCity {
         bool willhitBoundary = false;
         int boundary = 20;
 
-        auto [forward, left, right] = getDirectionalPoints(&agent, deltaTime);
+        auto [forward, left, right] = getDirectionalPoints(&agent);
         /*if (nextPos.x < boundary || nextPos.x > width - boundary || nextPos.y < boundary || nextPos.y > height - boundary){
             float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
             agent.addSteering(steeringAmount);     
@@ -148,7 +148,7 @@ namespace AutonomousCity {
         //draw
         window->draw(rectangle);
     };
-    void AgentController::obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants, float deltaTime){
+    void AgentController::obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants){
         //no need to continue if no other agents - the passed in agent has been removed already
         if (occupants.size() < 1){
             return;
@@ -162,7 +162,7 @@ namespace AutonomousCity {
         
         if (debugOn){
             //only calculate left and right positions if we need to
-            auto [forward, left, right] = getDirectionalPoints(agent, deltaTime);
+            auto [forward, left, right] = getDirectionalPoints(agent);
             drawLine(currentPos, forward);
             drawLine(currentPos, left);
             drawLine(currentPos, right);
@@ -194,7 +194,7 @@ namespace AutonomousCity {
             };
         };
     };
-    std::array<sf::Vector2f, 3> AgentController::getDirectionalPoints(Agent* agent, float deltaTime){
+    std::array<sf::Vector2f, 3> AgentController::getDirectionalPoints(Agent* agent){
         /**
          * These 3 directions will be used quite often for boundary & obsticle checking
          */
