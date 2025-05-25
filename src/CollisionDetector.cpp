@@ -22,6 +22,50 @@ namespace AutonomousCity {
         };
         return willhitBoundary;
     };
+    bool CollisionDetector::agentCollision(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants){
+        //no need to continue if no other agents - the passed in agent has been removed already
+        if (occupants.size() < 1){
+            return false;
+        };
+        float angleOffset = 0.523599f;//also used for detection later
+        const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
+        sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
+        float multiplier = calcLookAheadMultipler(agent->getCurrentSpeed(), size.x);
+        float angle = agent->getAngle();
+        sf::Vector2f currentPos = agent->getCurrentPos();
+        
+        if (debugOn){
+            //only calculate left and right positions if we need to
+            auto [forward, left, right] = getDirectionalPoints(agent);
+            drawLine(currentPos, forward);
+            drawLine(currentPos, left);
+            drawLine(currentPos, right);
+        };
+        //chatgpt did the maths for this part
+        sf::Vector2f forwardDir = { std::cos(angle), std::sin(angle) };
+        float cosThreshold = std::cos(angleOffset);
+        for (auto occupant : occupants){
+            if (agent != occupant){
+                sf::Vector2f occupantPos = occupant->getCurrentPos();
+                sf::Vector2f toOccupant = occupantPos - currentPos;//already have agent current position
+                
+                float distance = std::sqrt(toOccupant.x * toOccupant.x + toOccupant.y * toOccupant.y);
+                //avoid dividing by 0
+                if (distance == 0.f){
+                     continue;
+                }
+                sf::Vector2f toOccupantDir = toOccupant / distance;
+
+                float dotProduct = forwardDir.x * toOccupantDir.x + forwardDir.y * toOccupantDir.y;
+                
+                if (dotProduct >= cosThreshold && distance < multiplier){
+                    drawCollisionBox(agent);
+                    return true;
+                }
+            };
+        };
+        return false;
+    };
     std::array<sf::Vector2f, 3> CollisionDetector::getDirectionalPoints(Agent* agent){
         /**
          * These 3 directions will be used quite often for boundary & obsticle checking

@@ -6,8 +6,7 @@
 
 namespace AutonomousCity {
 
-   Agent::Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow, const unsigned int &width, const unsigned int &height)
-    :windowWidth(width), windowHeight(height)
+   Agent::Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow)
    {
         currentPos = pos;
         mass = 10;

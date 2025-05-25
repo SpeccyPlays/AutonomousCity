@@ -15,9 +15,7 @@ namespace AutonomousCity {
         public:
             AgentController(int amountOfAgents, CityGrid *cityGrid, const unsigned int pxWidth, const unsigned int pxHeight, sf::RenderWindow *renderWindow, TextureManager &manager);
             void run(sf::Vector2f desired, float deltaTime); //remove later, used for intial tests
-            void update();
             void draw();
-            void locomotion();
             void setDebug(bool debug);
             bool getDebug() const;
         private:
@@ -26,13 +24,6 @@ namespace AutonomousCity {
             sf::RenderWindow* window;
             TextureManager &textureManager;
             CollisionDetector collisionDetector;
-            unsigned int width;
-            unsigned int height;
             bool debugOn;
-            void drawLine(sf::Vector2f start, sf::Vector2f end);
-            void drawCollisionBox(Agent* agent);
-            void obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants);
-            std::array<sf::Vector2f, 3> getDirectionalPoints(Agent* agent);
-            float calcLookAheadMultipler(float currentSpeed, float size);
     };
 };

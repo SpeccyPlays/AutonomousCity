@@ -12,10 +12,9 @@ namespace AutonomousCity {
         //agents.resize(amountOfAgents);
         grid = cityGrid;
         debugOn = true;
-        width = pxWidth;
-        height = pxHeight;
+        collisionDetector.setDebug(true);
         for (int i = 0; i < amountOfAgents; i++){
-            AutonomousCity::Agent agent(sf::Vector2f(width /2 , height / 2), window, width, height);
+            AutonomousCity::Agent agent(sf::Vector2f(pxWidth /2 , pxHeight / 2), window);
             agents.emplace_back(agent);
             //add agent to the grid
             Agent& addedAgent = agents.back();//do this or it uses local copy instead of the one in the agents vector
@@ -37,7 +36,12 @@ namespace AutonomousCity {
             } else {
                 agent.addWander();
             };
-            obsticleDetections(&agent, currentCell.occupants);
+            if (collisionDetector.agentCollision(&agent, currentCell.occupants)){
+                //remove current speed in future once all agents don't start in the middle
+               if (agent.getCurrentSpeed() > 5){
+                    agent.slowDown();
+                }
+            };
             agent.update(desired, deltaTime);//desired is not actually used
             agent.locomotion(deltaTime);
             sf::Vector2i endingGridPos = grid->getGridPos(agent.getCurrentPos());
@@ -53,17 +57,6 @@ namespace AutonomousCity {
     bool AgentController::getDebug() const {
         return debugOn;
     };
-    void AgentController::update(){
-        for (Agent& agent : agents){
-            //do some stuff
-        };
-    };
-    void AgentController::locomotion(){
-        //Move the ants
-        for (Agent& agent : agents){
-            //do some stuff
-        };
-    }
     void AgentController::draw(){
         float yPos = 0.f;
         for (Agent& agent : agents){
@@ -92,121 +85,10 @@ namespace AutonomousCity {
                 window->draw(text);
             };*/
             yPos += 20.f;
-            if (yPos > height){
+            if (yPos > window->getSize().y){
                 yPos = 0;
             }
             window->draw(sprite);
         };
-    };
-    void AgentController::drawLine(sf::Vector2f start, sf::Vector2f end){
-         sf::Color lineColor(255, 255, 255);
-         std::array<sf::Vertex, 2> line = {
-            sf::Vertex{sf::Vector2f(start), lineColor},
-            sf::Vertex{sf::Vector2f(end), lineColor}
-         };
-         window->draw(line.data(), line.size(), sf::PrimitiveType::Lines);
-    };
-    void AgentController::drawCollisionBox(Agent* agent){
-        //get the texture size so we know how big to draw the box
-        const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
-        sf::Sprite sprite(texture);
-        sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
-        sf::Vector2f origin({size.x /2, size.y /2});
-        //work out where to start drawing
-        float angle = agent->getAngle();
-        sf::Vector2f distance({0, 0});
-        //Calculate distance
-        float x = std::cos(angle) * size.x; //the textures are facing to the right so x is height
-        float y = std::sin(angle) * size.x;
-        distance.x = x;
-        distance.y = y;
-        sf::Vector2f start = agent->getCurrentPos() + distance;
-        //Set up the shape
-        sf::Color lineColor(255,0,0);
-        sf::RectangleShape rectangle({size.x, size.y});
-        rectangle.setPosition(start);
-        rectangle.setFillColor(sf::Color::Transparent);
-        rectangle.setOutlineThickness(2.f);
-        rectangle.setOutlineColor(lineColor);
-        rectangle.setRotation(sf::radians(agent->getAngle()));
-        rectangle.setOrigin(origin);
-        //draw
-        window->draw(rectangle);
-    };
-    void AgentController::obsticleDetections(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants){
-        //no need to continue if no other agents - the passed in agent has been removed already
-        if (occupants.size() < 1){
-            return;
-        };
-        float angleOffset = 0.523599f;//also used for detection later
-        const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
-        sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
-        float multiplier = calcLookAheadMultipler(agent->getCurrentSpeed(), size.x);
-        float angle = agent->getAngle();
-        sf::Vector2f currentPos = agent->getCurrentPos();
-        
-        if (debugOn){
-            //only calculate left and right positions if we need to
-            auto [forward, left, right] = getDirectionalPoints(agent);
-            drawLine(currentPos, forward);
-            drawLine(currentPos, left);
-            drawLine(currentPos, right);
-        };
-        //chatgpt did the maths for this part
-        sf::Vector2f forwardDir = { std::cos(angle), std::sin(angle) };
-        float cosThreshold = std::cos(angleOffset);
-        for (auto occupant : occupants){
-            if (agent != occupant){
-                sf::Vector2f occupantPos = occupant->getCurrentPos();
-                sf::Vector2f toOccupant = occupantPos - currentPos;//already have agent current position
-                
-                float distance = std::sqrt(toOccupant.x * toOccupant.x + toOccupant.y * toOccupant.y);
-                //avoid dividing by 0
-                if (distance == 0.f){
-                     continue;
-                }
-                sf::Vector2f toOccupantDir = toOccupant / distance;
-
-                float dotProduct = forwardDir.x * toOccupantDir.x + forwardDir.y * toOccupantDir.y;
-                
-                if (dotProduct >= cosThreshold && distance < multiplier){
-                    drawCollisionBox(agent);
-                    //remove current speed in future once all agents don't start in the middle
-                    if (agent->getCurrentSpeed() > 5){
-                        agent->slowDown();
-                    }
-                }
-            };
-        };
-    };
-    std::array<sf::Vector2f, 3> AgentController::getDirectionalPoints(Agent* agent){
-        /**
-         * These 3 directions will be used quite often for boundary & obsticle checking
-         */
-        float angleOffset = 0.523599f;//also used for detection later
-        const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
-        sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
-        float multiplier = calcLookAheadMultipler(agent->getCurrentSpeed(), size.x);
-        float angle = agent->getAngle();
-        sf::Vector2f currentPos = agent->getCurrentPos();
-        sf::Vector2f forward({std::cos(angle) * multiplier, std::sin(angle) * multiplier});
-        sf::Vector2f left({std::cos(angle - angleOffset) * multiplier, std::sin(angle - angleOffset) * multiplier});
-        sf::Vector2f right ({std::cos(angle + angleOffset) * multiplier, std::sin(angle + angleOffset) * multiplier});
-        forward += currentPos;
-        left += currentPos;
-        right += currentPos;
-        return {
-            forward,
-            left,
-            right,
-        };
-    };
-    float AgentController::calcLookAheadMultipler(float currentSpeed, float size){
-        /**
-         * For collision detection, we want to be looking ahead at least the size amount, further depending on speed
-         */
-        float lookAheadAmount = 0.02f;
-
-        return (currentSpeed * lookAheadAmount) + size * 2; //need double the size distance so agents don't overlap
     };
 };
