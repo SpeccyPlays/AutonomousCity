@@ -42,6 +42,20 @@ namespace AutonomousCity {
                     agent.slowDown();
                 }
             };
+            auto [forwardBlocked, leftBlocked, rightBlocked] = collisionDetector.pathsBlocked(agent);
+            if (forwardBlocked){
+                float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
+                if (leftBlocked == false){
+                    agent.addSteering(-steeringAmount);
+                }
+                else if (rightBlocked == false){
+                    agent.addSteering(steeringAmount);
+                }
+                else {
+                    agent.slowDown();
+                    agent.addSteering(steeringAmount);
+                }
+            };
             agent.update(desired, deltaTime);//desired is not actually used
             agent.locomotion(deltaTime);
             sf::Vector2i endingGridPos = grid->getGridPos(agent.getCurrentPos());

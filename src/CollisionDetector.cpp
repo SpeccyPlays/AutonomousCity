@@ -66,6 +66,46 @@ namespace AutonomousCity {
         };
         return false;
     };
+    std::array<bool, 3> CollisionDetector::pathsBlocked(Agent& agent){
+
+        auto [forward, left, right] = getDirectionalPoints(&agent);
+        sf::Vector2i forwardGridPos = grid->getGridPos(forward);
+        sf::Vector2i leftGridPos = grid->getGridPos(left);
+        sf::Vector2i rightGridPos = grid->getGridPos(right);
+        //check if we're off grid first although shouldn't be
+        bool forwardBlocked = offGrid(forwardGridPos);
+        bool leftBlocked = offGrid(leftGridPos);
+        bool rightBlocked = offGrid(rightGridPos);
+        //if we're not off the grid then check if there's no road
+        if (forwardBlocked == false){
+            forwardBlocked = notRoadCheck(forwardGridPos);
+        };
+        if (leftBlocked == false){
+            leftBlocked = notRoadCheck(leftGridPos);
+        };
+        if (rightBlocked == false){
+            rightBlocked = notRoadCheck(rightGridPos);
+        };
+        return {
+            forwardBlocked,
+            leftBlocked,
+            rightBlocked
+        };
+    };
+    bool CollisionDetector::offGrid(sf::Vector2i gridPos){
+        unsigned int gridWidth = grid->getWidth();
+        unsigned int gridHeight = grid->getHeight();
+        if (gridPos.x >= static_cast<int>(gridWidth) || gridPos.y >= static_cast<int>(gridHeight) || gridPos.x < 0 || gridPos.y < 0){
+            return true;
+        }
+        return false;
+    };
+    bool CollisionDetector::notRoadCheck(sf::Vector2i gridPos){
+        if (grid->getTile(gridPos.x, gridPos.y).getType() != AutonomousCity::TileType::Road){
+            return true;
+        }
+        return false;
+    };
     std::array<sf::Vector2f, 3> CollisionDetector::getDirectionalPoints(Agent* agent){
         /**
          * These 3 directions will be used quite often for boundary & obsticle checking
