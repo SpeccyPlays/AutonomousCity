@@ -8,10 +8,9 @@
 namespace AutonomousCity {
 
     AgentController::AgentController(int amountOfAgents, CityGrid *cityGrid, const unsigned int pxWidth, const unsigned int pxHeight, sf::RenderWindow *renderWindow, TextureManager &manager)
-    : textureManager(manager){
+    : textureManager(manager), window(renderWindow), collisionDetector(cityGrid, renderWindow, manager){
         //agents.resize(amountOfAgents);
         grid = cityGrid;
-        window = renderWindow;
         debugOn = true;
         width = pxWidth;
         height = pxHeight;
@@ -31,7 +30,9 @@ namespace AutonomousCity {
             if (!grid->removeAgent(&agent, startingGridPos)){
                 std::cerr << "Agent probably off the grid" << std::endl;
             };
-            if (checkBoundary(agent, deltaTime)){
+            if (collisionDetector.checkBoundary(agent)){
+                float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
+                agent.addSteering(steeringAmount);  
                 agent.slowDown();
             } else {
                 agent.addWander();
@@ -47,6 +48,7 @@ namespace AutonomousCity {
     };
     void AgentController::setDebug(bool debug){
         debugOn = debug;
+        collisionDetector.setDebug(debug);
     };
     bool AgentController::getDebug() const {
         return debugOn;
@@ -95,23 +97,6 @@ namespace AutonomousCity {
             }
             window->draw(sprite);
         };
-    };
-    bool AgentController::checkBoundary(Agent &agent, float deltaTime){
-        bool willhitBoundary = false;
-        int boundary = 20;
-
-        auto [forward, left, right] = getDirectionalPoints(&agent);
-        /*if (nextPos.x < boundary || nextPos.x > width - boundary || nextPos.y < boundary || nextPos.y > height - boundary){
-            float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
-            agent.addSteering(steeringAmount);     
-            willhitBoundary = true;
-        };*/
-        if (forward.x < boundary || forward.x > width - boundary || forward.y < boundary || forward.y > height - boundary){
-            float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
-            agent.addSteering(steeringAmount);     
-            willhitBoundary = true;
-        };
-        return willhitBoundary;
     };
     void AgentController::drawLine(sf::Vector2f start, sf::Vector2f end){
          sf::Color lineColor(255, 255, 255);

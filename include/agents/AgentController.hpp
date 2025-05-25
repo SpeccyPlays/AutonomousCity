@@ -4,6 +4,7 @@
 #include "../include/CityGrid/CityGrid.hpp"
 #include "../include/assets/TextureManager.hpp"
 #include "../include/agents/Agents.hpp"
+#include "../include/agents/CollisionDetector.hpp"
 #include <vector>
 
 namespace AutonomousCity {
@@ -19,12 +20,12 @@ namespace AutonomousCity {
             void locomotion();
             void setDebug(bool debug);
             bool getDebug() const;
-            bool checkBoundary(Agent& agent, float deltaTime);
         private:
             std::vector<Agent> agents;
             CityGrid* grid;
             sf::RenderWindow* window;
             TextureManager &textureManager;
+            CollisionDetector collisionDetector;
             unsigned int width;
             unsigned int height;
             bool debugOn;
