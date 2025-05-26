@@ -4,152 +4,152 @@
   "tiles": [
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 1,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 2,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 3,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 4,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 5,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 7,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 8,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 9,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 10,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 11,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 12,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 13,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 14,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 15,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 16,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 17,
       "y": 0
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 0.0,
+      "tileSize": 32.0,
       "type": 0,
       "x": 18,
       "y": 0
@@ -196,145 +196,145 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 24,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 25,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 26,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 27,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 28,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 29,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 30,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 31,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 34,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 36,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 37,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 38,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 0
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 1
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 1
     },
@@ -356,17 +356,17 @@
     },
     {
       "state": 0,
-      "texture": "",
+      "texture": "include/assets/road.png",
       "tileSize": 32.0,
-      "type": 0,
+      "type": 1,
       "x": 4,
       "y": 1
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 5,
       "y": 1
     },
@@ -464,6 +464,14 @@
       "tileSize": 32.0,
       "type": 1,
       "x": 17,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "",
+      "tileSize": 32.0,
+      "type": 0,
+      "x": 18,
       "y": 1
     },
     {
@@ -471,14 +479,6 @@
       "texture": "",
       "tileSize": 0.0,
       "type": 0,
-      "x": 18,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 0.0,
-      "type": 0,
       "x": 19,
       "y": 1
     },
@@ -532,82 +532,10 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 26,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 27,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 28,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 29,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 30,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 31,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 32,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 33,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 34,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 35,
       "y": 1
     },
     {
@@ -615,23 +543,7 @@
       "texture": "include/assets/road.png",
       "tileSize": 32.0,
       "type": 1,
-      "x": 36,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 37,
-      "y": 1
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 38,
+      "x": 27,
       "y": 1
     },
     {
@@ -639,7 +551,7 @@
       "texture": "include/assets/road.png",
       "tileSize": 32.0,
       "type": 1,
-      "x": 39,
+      "x": 28,
       "y": 1
     },
     {
@@ -647,15 +559,95 @@
       "texture": "include/assets/road.png",
       "tileSize": 32.0,
       "type": 1,
-      "x": 0,
-      "y": 2
+      "x": 29,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
+      "x": 30,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
+      "x": 31,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
+      "x": 32,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
+      "x": 33,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
+      "x": 34,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
+      "x": 35,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
+      "x": 36,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
+      "x": 37,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
+      "x": 38,
+      "y": 1
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
-      "x": 1,
+      "x": 39,
+      "y": 1
+    },
+    {
+      "state": 0,
+      "texture": "",
+      "tileSize": 32.0,
+      "type": 0,
+      "x": 0,
       "y": 2
     },
     {
@@ -663,6 +655,14 @@
       "texture": "include/assets/road.png",
       "tileSize": 32.0,
       "type": 1,
+      "x": 1,
+      "y": 2
+    },
+    {
+      "state": 0,
+      "texture": "",
+      "tileSize": 32.0,
+      "type": 0,
       "x": 2,
       "y": 2
     },
@@ -676,9 +676,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 4,
       "y": 2
     },
@@ -700,81 +700,81 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 7,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 8,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 9,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 10,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 11,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 12,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 13,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 14,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 15,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 16,
       "y": 2
     },
@@ -868,41 +868,41 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 28,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 29,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 30,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 31,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 2
     },
@@ -948,41 +948,41 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 2
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 2,
       "y": 3
     },
@@ -1132,49 +1132,49 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 21,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 22,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 23,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 24,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 25,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 26,
       "y": 3
     },
@@ -1188,41 +1188,41 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 28,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 29,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 30,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 31,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 3
     },
@@ -1268,41 +1268,41 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 3
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 4
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 4
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 2,
       "y": 4
     },
@@ -1348,9 +1348,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 8,
       "y": 4
     },
@@ -1436,9 +1436,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 4
     },
@@ -1540,9 +1540,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 4
     },
@@ -1588,40 +1588,40 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 4
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 4
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 5
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 5
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 2,
       "y": 5
@@ -1636,25 +1636,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 4,
       "y": 5
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 5,
       "y": 5
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 5
     },
@@ -1668,17 +1668,17 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 8,
       "y": 5
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 9,
       "y": 5
     },
@@ -1756,9 +1756,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 5
     },
@@ -1908,40 +1908,40 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 5
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 5
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 6
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 6
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 2,
       "y": 6
@@ -1956,25 +1956,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 4,
       "y": 6
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 5,
       "y": 6
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 6
     },
@@ -1996,25 +1996,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 9,
       "y": 6
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 10,
       "y": 6
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 11,
       "y": 6
     },
@@ -2076,9 +2076,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 6
     },
@@ -2108,16 +2108,16 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 23,
       "y": 6
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 24,
       "y": 6
@@ -2140,9 +2140,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 27,
       "y": 6
     },
@@ -2228,40 +2228,40 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 6
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 6
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 7
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 7
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 2,
       "y": 7
@@ -2292,9 +2292,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 7
     },
@@ -2364,9 +2364,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 15,
       "y": 7
     },
@@ -2380,9 +2380,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 17,
       "y": 7
     },
@@ -2396,9 +2396,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 7
     },
@@ -2412,9 +2412,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 21,
       "y": 7
     },
@@ -2428,16 +2428,16 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 23,
       "y": 7
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 24,
       "y": 7
@@ -2548,40 +2548,40 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 7
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 7
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 8
     },
     {
       "state": 0,
-      "texture": "",
+      "texture": "include/assets/road.png",
       "tileSize": 32.0,
-      "type": 0,
+      "type": 1,
       "x": 1,
       "y": 8
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 2,
       "y": 8
@@ -2596,9 +2596,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 4,
       "y": 8
     },
@@ -2660,9 +2660,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 12,
       "y": 8
     },
@@ -2692,17 +2692,17 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 16,
       "y": 8
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 17,
       "y": 8
     },
@@ -2716,9 +2716,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 8
     },
@@ -2732,9 +2732,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 21,
       "y": 8
     },
@@ -2748,16 +2748,16 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 23,
       "y": 8
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 24,
       "y": 8
@@ -2868,25 +2868,25 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 8
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 8
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 9
     },
@@ -2916,25 +2916,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 4,
       "y": 9
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 5,
       "y": 9
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 9
     },
@@ -2948,9 +2948,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 8,
       "y": 9
     },
@@ -3020,9 +3020,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 17,
       "y": 9
     },
@@ -3036,9 +3036,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 9
     },
@@ -3052,9 +3052,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 21,
       "y": 9
     },
@@ -3148,9 +3148,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 9
     },
@@ -3188,25 +3188,25 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 9
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 9
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 10
     },
@@ -3268,25 +3268,25 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 8,
       "y": 10
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 9,
       "y": 10
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 10,
       "y": 10
     },
@@ -3356,9 +3356,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 10
     },
@@ -3372,9 +3372,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 21,
       "y": 10
     },
@@ -3468,25 +3468,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 10
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 34,
       "y": 10
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 10
     },
@@ -3516,17 +3516,17 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 10
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 11
     },
@@ -3604,25 +3604,25 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 10,
       "y": 11
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 11,
       "y": 11
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 12,
       "y": 11
     },
@@ -3652,17 +3652,17 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 16,
       "y": 11
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 17,
       "y": 11
     },
@@ -3788,25 +3788,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 11
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 34,
       "y": 11
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 11
     },
@@ -3836,25 +3836,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 11
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 12
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 12
     },
@@ -3892,9 +3892,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 12
     },
@@ -3924,9 +3924,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 10,
       "y": 12
     },
@@ -3940,25 +3940,25 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 12,
       "y": 12
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 13,
       "y": 12
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 14,
       "y": 12
     },
@@ -3972,33 +3972,33 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 16,
       "y": 12
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 17,
       "y": 12
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 18,
       "y": 12
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 19,
       "y": 12
     },
@@ -4108,25 +4108,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 12
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 34,
       "y": 12
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 12
     },
@@ -4148,33 +4148,33 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 12
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 39,
       "y": 12
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 13
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 13
     },
@@ -4212,9 +4212,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 13
     },
@@ -4244,9 +4244,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 10,
       "y": 13
     },
@@ -4276,17 +4276,17 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 14,
       "y": 13
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 15,
       "y": 13
     },
@@ -4300,33 +4300,33 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 17,
       "y": 13
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 18,
       "y": 13
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 19,
       "y": 13
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 20,
       "y": 13
     },
@@ -4356,9 +4356,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 24,
       "y": 13
     },
@@ -4428,9 +4428,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 13
     },
@@ -4444,9 +4444,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 13
     },
@@ -4468,33 +4468,33 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 13
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 39,
       "y": 13
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 14
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 14
     },
@@ -4532,9 +4532,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 14
     },
@@ -4564,9 +4564,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 10,
       "y": 14
     },
@@ -4612,17 +4612,17 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 16,
       "y": 14
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 17,
       "y": 14
     },
@@ -4636,17 +4636,17 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 19,
       "y": 14
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 20,
       "y": 14
     },
@@ -4685,16 +4685,16 @@
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 0.0,
       "type": 0,
       "x": 25,
       "y": 14
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 26,
       "y": 14
     },
@@ -4788,33 +4788,33 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 14
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 39,
       "y": 14
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 15
     },
@@ -4852,9 +4852,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 15
     },
@@ -4884,9 +4884,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 10,
       "y": 15
     },
@@ -4924,25 +4924,25 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 15,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 16,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 17,
       "y": 15
     },
@@ -4972,17 +4972,17 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 21,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 22,
       "y": 15
     },
@@ -4996,32 +4996,32 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 24,
       "y": 15
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 0.0,
       "type": 0,
       "x": 25,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 26,
       "y": 15
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 0.0,
       "type": 0,
       "x": 27,
       "y": 15
@@ -5060,58 +5060,50 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 34,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 36,
       "y": 15
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 37,
-      "y": 15
-    },
-    {
-      "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
-      "x": 38,
       "y": 15
     },
     {
@@ -5119,22 +5111,30 @@
       "texture": "include/assets/road.png",
       "tileSize": 32.0,
       "type": 1,
+      "x": 38,
+      "y": 15
+    },
+    {
+      "state": 0,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 39,
       "y": 15
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 16
     },
@@ -5172,9 +5172,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 16
     },
@@ -5204,9 +5204,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 10,
       "y": 16
     },
@@ -5244,9 +5244,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 15,
       "y": 16
     },
@@ -5268,17 +5268,17 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 18,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 19,
       "y": 16
     },
@@ -5292,64 +5292,64 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 21,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 22,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 23,
       "y": 16
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 0.0,
       "type": 0,
       "x": 24,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 25,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 26,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 27,
       "y": 16
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 0.0,
       "type": 0,
       "x": 28,
       "y": 16
@@ -5357,7 +5357,7 @@
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 0.0,
       "type": 0,
       "x": 29,
       "y": 16
@@ -5373,88 +5373,88 @@
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 31,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 34,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 36,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 37,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 39,
       "y": 16
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 17
     },
@@ -5492,9 +5492,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 17
     },
@@ -5524,9 +5524,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 10,
       "y": 17
     },
@@ -5564,9 +5564,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 15,
       "y": 17
     },
@@ -5581,32 +5581,32 @@
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 0.0,
       "type": 0,
       "x": 17,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 18,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 19,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 20,
       "y": 17
     },
@@ -5628,64 +5628,64 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 23,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 24,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 25,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 26,
       "y": 17
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 0.0,
       "type": 0,
       "x": 27,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 28,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 29,
       "y": 17
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 30,
       "y": 17
@@ -5693,88 +5693,88 @@
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 31,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 34,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 36,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 37,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 38,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 17
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 18
     },
@@ -5812,9 +5812,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 18
     },
@@ -5828,17 +5828,17 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 8,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 9,
       "y": 18
     },
@@ -5852,33 +5852,33 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 11,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 12,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 13,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 14,
       "y": 18
     },
@@ -5892,81 +5892,81 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 16,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 17,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 18,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 20,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 21,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 22,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 23,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 24,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 25,
       "y": 18
     },
@@ -5996,73 +5996,73 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 29,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 30,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 31,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 18
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 34,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 36,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 37,
       "y": 18
     },
@@ -6076,25 +6076,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 18
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 19
     },
@@ -6220,73 +6220,73 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 17,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 18,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 20,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 21,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 22,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 23,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 24,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 25,
       "y": 19
     },
@@ -6300,9 +6300,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 27,
       "y": 19
     },
@@ -6332,57 +6332,57 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 31,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 19
     },
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 34,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 36,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 37,
       "y": 19
     },
@@ -6396,33 +6396,33 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 19
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 1,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 2,
       "y": 20
     },
@@ -6517,7 +6517,7 @@
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 14,
       "y": 20
@@ -6525,64 +6525,64 @@
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 15,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 16,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 17,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 18,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 19,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 20,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 21,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 22,
       "y": 20
     },
@@ -6596,73 +6596,73 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 24,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 25,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 26,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 27,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 28,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 29,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 30,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 31,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 32,
       "y": 20
     },
@@ -6684,9 +6684,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 35,
       "y": 20
     },
@@ -6716,113 +6716,113 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 20
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 0,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 1,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 2,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 3,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 4,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 5,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 6,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 7,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 8,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 9,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 10,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 11,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 12,
       "y": 21
     },
@@ -6836,209 +6836,209 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 14,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 15,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 16,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 17,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 18,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 19,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 20,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 21,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 22,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 23,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 24,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 25,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 26,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 27,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 28,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 29,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 30,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 31,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 32,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 33,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 34,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 35,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 36,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 37,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 38,
       "y": 21
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
+      "texture": "",
       "tileSize": 32.0,
-      "type": 1,
+      "type": 0,
       "x": 39,
       "y": 21
     }

@@ -31,6 +31,7 @@ namespace AutonomousCity {
         float getAngle() const;
         void addSteering(float amount);
         const float getCurrentSpeed() const;
+        void setCurrentSpeed(float newSpeed);
 
         void update(sf::Vector2f desired, float deltaTime);
         void addWander();

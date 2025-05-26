@@ -34,13 +34,6 @@ namespace AutonomousCity {
         float angle = agent->getAngle();
         sf::Vector2f currentPos = agent->getCurrentPos();
         
-        if (debugOn){
-            //only calculate left and right positions if we need to
-            auto [forward, left, right] = getDirectionalPoints(agent);
-            drawLine(currentPos, forward);
-            drawLine(currentPos, left);
-            drawLine(currentPos, right);
-        };
         //chatgpt did the maths for this part
         sf::Vector2f forwardDir = { std::cos(angle), std::sin(angle) };
         float cosThreshold = std::cos(angleOffset);
@@ -69,6 +62,7 @@ namespace AutonomousCity {
     std::array<bool, 3> CollisionDetector::pathsBlocked(Agent& agent){
 
         auto [forward, left, right] = getDirectionalPoints(&agent);
+        
         sf::Vector2i forwardGridPos = grid->getGridPos(forward);
         sf::Vector2i leftGridPos = grid->getGridPos(left);
         sf::Vector2i rightGridPos = grid->getGridPos(right);
@@ -76,15 +70,43 @@ namespace AutonomousCity {
         bool forwardBlocked = offGrid(forwardGridPos);
         bool leftBlocked = offGrid(leftGridPos);
         bool rightBlocked = offGrid(rightGridPos);
-        //if we're not off the grid then check if there's no road
+        sf::Color forwardLine(255, 255, 255);
+        sf::Color leftLine(255, 255, 255);
+        sf::Color rightLine(255, 255, 255);
+        //Red line = offgrid
+        //Magenta line = no road
+        if (forwardBlocked){
+            forwardLine = sf::Color::Red;
+        }
         if (forwardBlocked == false){
             forwardBlocked = notRoadCheck(forwardGridPos);
+            if (forwardBlocked){
+                forwardLine = sf::Color::Magenta;
+            }
         };
+        if (leftBlocked){
+            leftLine = sf::Color::Red;
+        }
         if (leftBlocked == false){
             leftBlocked = notRoadCheck(leftGridPos);
+            if (leftBlocked){
+                leftLine = sf::Color::Magenta;
+            }
         };
+        if (rightBlocked){
+            rightLine = sf::Color::Red;
+        }
         if (rightBlocked == false){
             rightBlocked = notRoadCheck(rightGridPos);
+            if (rightBlocked){
+                rightLine = sf::Color::Magenta;
+            }
+        };
+        if (debugOn){
+            sf::Vector2f currentPos = agent.getCurrentPos();
+            drawLine(currentPos, forward, forwardLine);
+            drawLine(currentPos, left, leftLine);
+            drawLine(currentPos, right, rightLine);
         };
         return {
             forwardBlocked,
@@ -128,8 +150,7 @@ namespace AutonomousCity {
             right,
         };
     };
-    void CollisionDetector::drawLine(sf::Vector2f start, sf::Vector2f end){
-         sf::Color lineColor(255, 255, 255);
+    void CollisionDetector::drawLine(sf::Vector2f start, sf::Vector2f end, sf::Color lineColor){
          std::array<sf::Vertex, 2> line = {
             sf::Vertex{sf::Vector2f(start), lineColor},
             sf::Vertex{sf::Vector2f(end), lineColor}

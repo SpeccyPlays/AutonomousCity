@@ -33,8 +33,6 @@ namespace AutonomousCity {
                 float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
                 agent.addSteering(steeringAmount);  
                 agent.slowDown();
-            } else {
-                agent.addWander();
             };
             if (collisionDetector.agentCollision(&agent, currentCell.occupants)){
                 //remove current speed in future once all agents don't start in the middle
@@ -45,16 +43,29 @@ namespace AutonomousCity {
             auto [forwardBlocked, leftBlocked, rightBlocked] = collisionDetector.pathsBlocked(agent);
             if (forwardBlocked){
                 float steeringAmount = 0.1 - (agent.getCurrentSpeed() * 0.001);
-                if (leftBlocked == false){
+                if (!leftBlocked && rightBlocked){
                     agent.addSteering(-steeringAmount);
                 }
-                else if (rightBlocked == false){
+                else if (!rightBlocked && leftBlocked){
                     agent.addSteering(steeringAmount);
+                }
+                else if (!leftBlocked && !rightBlocked) {
+                    if (rand() % 2 == 0) {
+                        agent.addSteering(-steeringAmount);
+                    }
+                    else {
+                        agent.addSteering(steeringAmount);
+                    }
                 }
                 else {
-                    agent.slowDown();
-                    agent.addSteering(steeringAmount);
+                    //Probably completely blocked so try to u-turn out
+                    agent.addSteering(steeringAmount * 2);
+                    if (agent.getCurrentSpeed() > 5){
+                        agent.slowDown();
+                    }
                 }
+            } else {
+                agent.addWander();
             };
             agent.update(desired, deltaTime);//desired is not actually used
             agent.locomotion(deltaTime);

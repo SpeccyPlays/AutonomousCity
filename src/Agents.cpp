@@ -89,4 +89,7 @@ namespace AutonomousCity {
     const float Agent::getCurrentSpeed() const {
         return currentSpeed;
     }
+    void Agent::setCurrentSpeed(float newSpeed){
+        currentSpeed = newSpeed;
+    }
 }

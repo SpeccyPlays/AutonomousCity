@@ -24,7 +24,7 @@ namespace AutonomousCity {
             bool notRoadCheck(sf::Vector2i gridPos);
             std::array<sf::Vector2f, 3> getDirectionalPoints(Agent* agent);
             float calcLookAheadMultipler(float currentSpeed, float size);
-            void drawLine(sf::Vector2f start, sf::Vector2f end);
+            void drawLine(sf::Vector2f start, sf::Vector2f end, sf::Color lineColor);
             void drawCollisionBox(Agent* agent);
             bool debugOn;
     };
