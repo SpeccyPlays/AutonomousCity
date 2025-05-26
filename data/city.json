@@ -900,9 +900,9 @@
     },
     {
       "state": 0,
-      "texture": "",
+      "texture": "include/assets/road.png",
       "tileSize": 32.0,
-      "type": 0,
+      "type": 1,
       "x": 32,
       "y": 2
     },
@@ -1300,9 +1300,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 2,
       "y": 4
     },
@@ -1316,25 +1316,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 4,
       "y": 4
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 5,
       "y": 4
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 6,
       "y": 4
     },
@@ -1676,9 +1676,9 @@
     },
     {
       "state": 0,
-      "texture": "",
+      "texture": "include/assets/road.png",
       "tileSize": 32.0,
-      "type": 0,
+      "type": 1,
       "x": 9,
       "y": 5
     },
@@ -1708,9 +1708,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 13,
       "y": 5
     },
@@ -1860,9 +1860,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 32,
       "y": 5
     },
@@ -2644,9 +2644,9 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 10,
       "y": 8
     },
@@ -3052,9 +3052,9 @@
     },
     {
       "state": 0,
-      "texture": "",
+      "texture": "include/assets/road.png",
       "tileSize": 32.0,
-      "type": 0,
+      "type": 1,
       "x": 21,
       "y": 9
     },
@@ -3220,9 +3220,9 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 2,
       "y": 10
     },
@@ -3236,25 +3236,25 @@
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 4,
       "y": 10
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 5,
       "y": 10
     },
     {
       "state": 0,
-      "texture": "include/assets/road.png",
-      "tileSize": 32.0,
-      "type": 1,
+      "texture": "",
+      "tileSize": 0.0,
+      "type": 0,
       "x": 6,
       "y": 10
     },
@@ -3388,25 +3388,25 @@
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 23,
       "y": 10
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 24,
       "y": 10
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 25,
       "y": 10
     },
@@ -3717,16 +3717,16 @@
     {
       "state": 0,
       "texture": "",
-      "tileSize": 8.813674083543657e-39,
+      "tileSize": 32.0,
       "type": 0,
       "x": 24,
       "y": 11
     },
     {
       "state": 0,
-      "texture": "",
-      "tileSize": 8.813674083543657e-39,
-      "type": 0,
+      "texture": "include/assets/road.png",
+      "tileSize": 32.0,
+      "type": 1,
       "x": 25,
       "y": 11
     },

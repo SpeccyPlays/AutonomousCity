@@ -16,7 +16,7 @@ namespace AutonomousCity {
         };
 
         public:
-        Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow);
+        Agent(sf::Vector2f pos);
         sf::Vector2f getCurrentPos() const;
         sf::Vector2f getVelocity() const;
         sf::Vector2f getAcceleration() const;
@@ -47,14 +47,12 @@ namespace AutonomousCity {
         sf::Vector2f acceleration;
         sf::Vector2f desiredPos;
         float angle;
-        unsigned int mass;
         float maxspeed;
         float currentSpeed;
         float accelerationRate;
         float wanderingDistance;
         float steeringForce;
         AgentState agentState;
-        sf::RenderWindow *window;
         std::string texturePath;
         //used for random wandering
         std::mt19937 rngSeed;

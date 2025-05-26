@@ -6,17 +6,15 @@
 
 namespace AutonomousCity {
 
-   Agent::Agent(sf::Vector2f pos, sf::RenderWindow *renderWindow)
+   Agent::Agent(sf::Vector2f pos)
    {
         currentPos = pos;
-        mass = 10;
-        maxspeed = 100;
+        maxspeed = 50;
         wanderingDistance = 0.01f;
         steeringForce = 5.f;
         agentState = AgentState::Wandering;
-        window = renderWindow;
         velocity = {0.f, 0.f};
-        accelerationRate = 5.f;
+        accelerationRate = maxspeed * 0.1f;
         currentSpeed = 0.f;
         rngSeed = std::mt19937(std::random_device{}());
         wanderDist = std::uniform_real_distribution<float>(-wanderingDistance, wanderingDistance);
@@ -57,8 +55,8 @@ namespace AutonomousCity {
     }
     void Agent::slowDown(){
         currentSpeed *= 0.8f;
-        if (currentSpeed < 0){
-            currentSpeed = 5.f;
+        if (currentSpeed < 1){
+            currentSpeed = 0.f;
         }
         setVelocity();
     };

@@ -14,7 +14,7 @@ namespace AutonomousCity {
         debugOn = true;
         collisionDetector.setDebug(true);
         for (int i = 0; i < amountOfAgents; i++){
-            AutonomousCity::Agent agent(sf::Vector2f(pxWidth /2 , pxHeight / 2), window);
+            AutonomousCity::Agent agent(sf::Vector2f(pxWidth /2 , pxHeight / 2));
             agents.emplace_back(agent);
             //add agent to the grid
             Agent& addedAgent = agents.back();//do this or it uses local copy instead of the one in the agents vector
@@ -67,7 +67,7 @@ namespace AutonomousCity {
             } else if (collisionDetector.laneDisciplineCheck(&agent)){
                 //checks if we're going off the right hand side of road and moves to left
                 //allows more wander this way
-                float steeringBias = 0.002f;
+                float steeringBias = 0.001f;
                 agent.addSteering(-steeringBias);
             } else {
                 agent.addWander();
