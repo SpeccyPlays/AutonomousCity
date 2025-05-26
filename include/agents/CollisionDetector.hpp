@@ -14,7 +14,7 @@ namespace AutonomousCity {
             CollisionDetector(CityGrid *cityGrid, sf::RenderWindow *renderWindow, TextureManager &manager);
             bool checkBoundary(Agent& agent);
             bool agentCollision(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants);
-            bool laneDisiplineCheck(Agent* agent);
+            bool laneDisciplineCheck(Agent* agent);
             std::array<bool, 3> pathsBlocked(Agent& agent);
             void setDebug(bool debug);
         private:

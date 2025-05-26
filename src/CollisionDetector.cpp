@@ -128,7 +128,7 @@ namespace AutonomousCity {
         }
         return false;
     };
-    bool CollisionDetector::laneDisiplineCheck(Agent* agent){
+    bool CollisionDetector::laneDisciplineCheck(Agent* agent){
         sf::Vector2f sidePoint = getSidePoint(agent);
         if (debugOn){
             sf::Vector2f currentPos = agent->getCurrentPos();

@@ -64,7 +64,7 @@ namespace AutonomousCity {
                         agent.slowDown();
                     }
                 }
-            } else if (collisionDetector.laneDisiplineCheck(&agent)){
+            } else if (collisionDetector.laneDisciplineCheck(&agent)){
                 //checks if we're going off the right hand side of road and moves to left
                 //allows more wander this way
                 float steeringBias = 0.002f;
