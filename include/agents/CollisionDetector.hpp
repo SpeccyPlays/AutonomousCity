@@ -14,6 +14,7 @@ namespace AutonomousCity {
             CollisionDetector(CityGrid *cityGrid, sf::RenderWindow *renderWindow, TextureManager &manager);
             bool checkBoundary(Agent& agent);
             bool agentCollision(Agent* agent, std::unordered_set<AutonomousCity::Agent *> &occupants);
+            bool laneDisiplineCheck(Agent* agent);
             std::array<bool, 3> pathsBlocked(Agent& agent);
             void setDebug(bool debug);
         private:
@@ -22,6 +23,7 @@ namespace AutonomousCity {
             TextureManager &textureManager;
             bool offGrid(sf::Vector2i gridPos);
             bool notRoadCheck(sf::Vector2i gridPos);
+            sf::Vector2f getSidePoint(Agent* agent);
             std::array<sf::Vector2f, 3> getDirectionalPoints(Agent* agent);
             float calcLookAheadMultipler(float currentSpeed, float size);
             void drawLine(sf::Vector2f start, sf::Vector2f end, sf::Color lineColor);

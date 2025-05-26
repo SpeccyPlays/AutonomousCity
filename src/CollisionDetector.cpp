@@ -128,6 +128,25 @@ namespace AutonomousCity {
         }
         return false;
     };
+    bool CollisionDetector::laneDisiplineCheck(Agent* agent){
+        sf::Vector2f sidePoint = getSidePoint(agent);
+        if (debugOn){
+            sf::Vector2f currentPos = agent->getCurrentPos();
+            drawLine(currentPos, sidePoint, sf::Color::Green);
+        }
+        sf::Vector2i gridPos = grid->getGridPos(sidePoint);
+        return notRoadCheck(gridPos);
+    };
+    sf::Vector2f CollisionDetector::getSidePoint(Agent* agent){
+        float sideAngle = 1.5708; //90 degrees in radians
+        const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
+        sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
+        float angle = agent->getAngle();
+        angle += sideAngle;
+        sf::Vector2f currentPos = agent->getCurrentPos();
+        sf::Vector2f sidePos({std::cos(angle) * size.x * 2, std::sin(angle) * size.x * 2});
+        return sidePos += currentPos;
+    };
     std::array<sf::Vector2f, 3> CollisionDetector::getDirectionalPoints(Agent* agent){
         /**
          * These 3 directions will be used quite often for boundary & obsticle checking

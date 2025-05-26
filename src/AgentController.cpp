@@ -64,9 +64,15 @@ namespace AutonomousCity {
                         agent.slowDown();
                     }
                 }
+            } else if (collisionDetector.laneDisiplineCheck(&agent)){
+                //checks if we're going off the right hand side of road and moves to left
+                //allows more wander this way
+                float steeringBias = 0.002f;
+                agent.addSteering(-steeringBias);
             } else {
                 agent.addWander();
             };
+            
             agent.update(desired, deltaTime);//desired is not actually used
             agent.locomotion(deltaTime);
             sf::Vector2i endingGridPos = grid->getGridPos(agent.getCurrentPos());
