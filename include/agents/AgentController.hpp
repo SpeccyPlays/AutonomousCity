@@ -19,7 +19,7 @@ namespace AutonomousCity {
             void setDebug(bool debug);
             bool getDebug() const;
         private:
-            std::vector<Agent> agents;
+            std::vector<std::unique_ptr<AutonomousCity::Agent>> agents;
             CityGrid* grid;
             sf::RenderWindow* window;
             TextureManager &textureManager;

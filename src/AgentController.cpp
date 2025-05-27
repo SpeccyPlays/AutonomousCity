@@ -13,17 +13,23 @@ namespace AutonomousCity {
         grid = cityGrid;
         debugOn = true;
         collisionDetector.setDebug(true);
-        for (int i = 0; i < amountOfAgents; i++){
-            AutonomousCity::Agent agent(sf::Vector2f(pxWidth /2 , pxHeight / 2));
-            agents.emplace_back(agent);
-            //add agent to the grid
-            Agent& addedAgent = agents.back();//do this or it uses local copy instead of the one in the agents vector
-            sf::Vector2i startingGridPos = grid->getGridPos(addedAgent.getCurrentPos());
-            grid->addAgent(&addedAgent, startingGridPos);
-        }
+        for (int i = 0; i < amountOfAgents; i++) {
+                std::unique_ptr<AutonomousCity::Agent> agent;
+
+                if (rand() % 5 == 0) {
+                    agent = std::make_unique<AutonomousCity::OldPerson>(sf::Vector2f(pxWidth / 2, pxHeight / 2));
+                } else {
+                    agent = std::make_unique<AutonomousCity::Agent>(sf::Vector2f(pxWidth / 2, pxHeight / 2));
+                }
+
+                sf::Vector2i startingGridPos = grid->getGridPos(agent->getCurrentPos());
+                grid->addAgent(agent.get(), startingGridPos);
+                agents.emplace_back(std::move(agent));
+            }
     };
     void AgentController::run(sf::Vector2f desired, float deltaTime){
-        for (Agent& agent : agents){
+        for (auto& agentPtr : agents){
+            Agent& agent = *agentPtr;
             sf::Vector2i startingGridPos = grid->getGridPos(agent.getCurrentPos());
             AutonomousCity::Cell& currentCell = grid->getCell(startingGridPos);
             if (!grid->removeAgent(&agent, startingGridPos)){
@@ -90,7 +96,8 @@ namespace AutonomousCity {
     };
     void AgentController::draw(){
         float yPos = 0.f;
-        for (Agent& agent : agents){
+        for (auto& agentPtr : agents){
+            Agent& agent = *agentPtr;
             const sf::Texture &texture = textureManager.getTexture(agent.getTexturePath());
             sf::Sprite sprite(texture);
             sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());

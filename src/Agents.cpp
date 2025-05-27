@@ -5,16 +5,18 @@
 #include <iostream>
 
 namespace AutonomousCity {
-
+    /**
+     * Constructors
+     */
    Agent::Agent(sf::Vector2f pos)
    {
         currentPos = pos;
         maxspeed = 50;
         wanderingDistance = 0.01f;
-        steeringForce = 5.f;
         agentState = AgentState::Wandering;
         velocity = {0.f, 0.f};
         accelerationRate = maxspeed * 0.1f;
+        decelerationRate = 0.8f;
         currentSpeed = 0.f;
         rngSeed = std::mt19937(std::random_device{}());
         wanderDist = std::uniform_real_distribution<float>(-wanderingDistance, wanderingDistance);
@@ -23,6 +25,17 @@ namespace AutonomousCity {
         texturePath = "include/assets/car.png";
 
     };
+    OldPerson::OldPerson(sf::Vector2f pos) : Agent(pos) {
+        maxspeed = 40;
+        wanderingDistance = 0.02f;
+        agentState = AgentState::Wandering;
+        accelerationRate = maxspeed * 0.1f;
+        decelerationRate = 0.9f;
+        texturePath = "include/assets/caroldperson.png";
+    }; 
+    /**
+     * Code
+     */
     void Agent::update(sf::Vector2f desired, float deltaTime){
         float speedLimit = maxspeed;
         accelerate(deltaTime);
@@ -54,7 +67,7 @@ namespace AutonomousCity {
         velocity.y = std::sin(angle) * currentSpeed;
     }
     void Agent::slowDown(){
-        currentSpeed *= 0.8f;
+        currentSpeed *= decelerationRate;
         if (currentSpeed < 1){
             currentSpeed = 0.f;
         }
@@ -90,4 +103,5 @@ namespace AutonomousCity {
     void Agent::setCurrentSpeed(float newSpeed){
         currentSpeed = newSpeed;
     }
+    
 }

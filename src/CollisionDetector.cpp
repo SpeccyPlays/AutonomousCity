@@ -138,7 +138,7 @@ namespace AutonomousCity {
         return notRoadCheck(gridPos);
     };
     sf::Vector2f CollisionDetector::getSidePoint(Agent* agent){
-        float sideAngle = 1.5708; //90 degrees in radians
+        float sideAngle = 0.785398f; //90 degrees in radians
         const sf::Texture &texture = textureManager.getTexture(agent->getTexturePath());
         sf::Vector2f size = static_cast<sf::Vector2f>(texture.getSize());
         float angle = agent->getAngle();
