@@ -8,12 +8,12 @@ namespace AutonomousCity {
     Tile::Tile(TextureManager* manager)
     : type(TileType::Empty), state(TileState::Empty), texturePath(""), textureManager(manager) {}
 
-    Tile::Tile(TileType type, TileState state, const std::string& texturePath, TextureManager* manager, float tileSize)
+    Tile::Tile(Tile::TileType type, TileState state, const std::string& texturePath, TextureManager* manager, float tileSize)
         : type(type), state(state), texturePath(texturePath), textureManager(manager) {
             this->tileSize = tileSize;
         }
 
-    TileType Tile::getType() const {
+    Tile::TileType Tile::getType() const {
         return type;
     }
 

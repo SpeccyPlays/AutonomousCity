@@ -123,7 +123,7 @@ namespace AutonomousCity {
         return false;
     };
     bool CollisionDetector::notRoadCheck(sf::Vector2i gridPos){
-        if (grid->getTile(gridPos.x, gridPos.y).getType() != AutonomousCity::TileType::Road){
+        if (grid->getTile(gridPos.x, gridPos.y).getType() != AutonomousCity::Tile::TileType::Road){
             return true;
         }
         return false;

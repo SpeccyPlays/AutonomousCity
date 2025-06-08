@@ -137,7 +137,7 @@ namespace AutonomousCity
         {
             unsigned int x = entry["x"];
             unsigned int y = entry["y"];
-            TileType type = static_cast<TileType>(entry["type"]);
+            Tile::TileType type = static_cast<Tile::TileType>(entry["type"]);
             TileState state = static_cast<TileState>(entry["state"]);
             std::string texture = entry["texture"];
             float tileSize = entry["tileSize"];
