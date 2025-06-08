@@ -16,6 +16,10 @@ namespace AutonomousCity {
     enum class TileType {
         Empty,
         Road,
+        RoadHori,
+        RoadVert,
+        Ttop,
+        Tbottom,
         Pavement,
         Building,
         TrafficLight,

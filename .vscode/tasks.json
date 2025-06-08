@@ -16,6 +16,7 @@
           "src/Agents.cpp",
           "src/AgentController.cpp",
           "src/CollisionDetector.cpp",
+          "src/Menu.cpp",
           "-LC:/src/SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit/SFML-3.0.0/lib",
           "-lsfml-graphics",
           "-lsfml-window",

@@ -308,9 +308,9 @@
     },
     {
       "state": 0,
-      "texture": "",
+      "texture": "include/assets/road.png",
       "tileSize": 32.0,
-      "type": 0,
+      "type": 1,
       "x": 38,
       "y": 0
     },
