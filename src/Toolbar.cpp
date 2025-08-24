@@ -13,10 +13,10 @@ namespace AutonomousCity {
         }
     }
 
-    int Toolbar::handleClick(sf::Vector2f mousePos) {
+    bool Toolbar::handleClick(sf::Vector2f mousePos) {
         for (size_t i = 0; i < buttons.size(); i++) {
-            if (buttons[i].contains(mousePos)) return static_cast<int>(i);
+            if (buttons[i].contains(mousePos)) return true;
         }
-        return -1;
+        return false;
     }
 }

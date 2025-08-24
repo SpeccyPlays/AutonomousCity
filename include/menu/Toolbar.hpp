@@ -10,7 +10,7 @@ namespace AutonomousCity {
 
         void addButton(const std::string& text, const sf::Font& font, sf::Vector2f pos, sf::Vector2f size);
         void draw(sf::RenderWindow& window);
-        int handleClick(sf::Vector2f mousePos);
+        bool handleClick(sf::Vector2f mousePos);
     };
 }
 
