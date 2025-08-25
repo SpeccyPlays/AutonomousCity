@@ -2,7 +2,7 @@
 #include "CityGrid/CityGrid.hpp"
 #include "CityGrid/Tile.hpp"
 #include "../include/agents/AgentController.hpp"
-#include "../include/menu/Toolbar.hpp"
+#include "../include/menu/ToolbarBuilder.hpp"
 #include <iostream>
 int main()
 {
@@ -20,21 +20,8 @@ int main()
     AutonomousCity::TextureManager textureManager;
     AutonomousCity::CityGrid city(gridWidth, gridHeight, textureManager, tileSize);
     AutonomousCity::AgentController agents(50, &city, windowWidth, windowHeight, &window, textureManager);
-    
-    AutonomousCity::Toolbar toolbar;
-    sf::Font font;
-    if (!font.openFromFile("include/assets/arial.ttf")) {
-        std::cerr << "Failed to load font" << std::endl;
-    }
-    sf::Vector2f toolbarStart(10, 10);
-    std::vector<std::string> names = {"Open", "Save", "Debug"};
-    sf::Vector2f pos = toolbarStart;
-
-    for (size_t i = 0; i < names.size(); i++) {
-        sf::Vector2f buttonSize(names[i].length() * 18, tileSize);
-        sf::Vector2f gap(buttonSize.x + tileSize, 0);
-        toolbar.addButton(names[i], font, pos + gap * (float)i, buttonSize);
-    }
+    AutonomousCity::ToolbarBuilder toolbars;
+    toolbars.buildToolbars();
 
     if (city.loadFromFile(cityDataPath)){
         std::cout << "City loaded from: " << cityDataPath << '\n';
@@ -57,7 +44,7 @@ int main()
         // Preparation for adding tiles
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
 
-            if (toolbar.handleClick(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)))){
+            if (toolbars.handleClick(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)))){
                 std::cout << "We've clicked the menu" << std::endl;
             }
             else {
@@ -91,7 +78,7 @@ int main()
         //draw agents last so they're on top of the grid
         agents.run(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)), deltaTime);
         agents.draw();
-        toolbar.draw(window);
+        toolbars.draw(window);
         // end the current frame
         window.display();
     };
