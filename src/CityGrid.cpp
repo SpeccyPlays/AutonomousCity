@@ -91,6 +91,16 @@ namespace AutonomousCity
         grid[gridPos.y][gridPos.x].occupants.erase(agent);
         return true;
     };
+    void CityGrid::saveFromMenu() const{
+        std::string filename = "test";
+        std::cout << "File name Saved: " << filename << std::endl;
+        /*if (CityGrid::saveToFile(filename)){
+            std::cout << "File name loaded: " << filename << std::endl;
+        }
+        else {
+            std::cerr << "File name not loaded: " << filename << std::endl;
+        }*/
+    }
     bool CityGrid::saveToFile(const std::string &filename) const
     {
         json j;
@@ -118,7 +128,16 @@ namespace AutonomousCity
         file << j.dump(2);
         return true;
     };
-
+    void CityGrid::loadFromMenu(){
+        std::string filename = "test";
+        std::cout << "File name opened: " << filename << std::endl;
+        /*if (CityGrid::loadFromFile(filename)){
+            std::cout << "File name saved: " << filename << std::endl;
+        }
+        else {
+            std::cerr << "File name not saved: " << filename << std::endl;
+        }*/
+    }
     bool CityGrid::loadFromFile(const std::string &filename)
     {
         std::ifstream file(filename);

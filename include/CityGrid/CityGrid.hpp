@@ -36,6 +36,8 @@ namespace AutonomousCity
 
         bool saveToFile(const std::string &filename) const;
         bool loadFromFile(const std::string &filename);
+        void loadFromMenu();
+        void saveFromMenu() const;
         bool addAgent(Agent *agent, sf::Vector2i gridPos);
         bool removeAgent(Agent *agent, sf::Vector2i gridPos);
     private:

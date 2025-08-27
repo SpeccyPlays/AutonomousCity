@@ -91,6 +91,11 @@ namespace AutonomousCity {
         debugOn = debug;
         collisionDetector.setDebug(debug);
     };
+    void AgentController::toggleDebug(){
+        debugOn = !debugOn;
+        std::cout << "Debug set to: " << debugOn << std::endl;
+        collisionDetector.setDebug(debugOn);
+    }
     bool AgentController::getDebug() const {
         return debugOn;
     };

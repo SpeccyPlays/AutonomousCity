@@ -18,6 +18,7 @@ namespace AutonomousCity {
             void draw();
             void setDebug(bool debug);
             bool getDebug() const;
+            void toggleDebug();
         private:
             std::vector<std::unique_ptr<AutonomousCity::Agent>> agents;
             CityGrid* grid;

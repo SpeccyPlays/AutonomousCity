@@ -8,9 +8,9 @@ namespace AutonomousCity {
     public:
         std::vector<Button> buttons;
 
-        void addButton(const std::string& text, const sf::Font& font, sf::Vector2f pos, sf::Vector2f size);
+        void addButton(const std::string& text, const sf::Font& font, sf::Vector2f pos, sf::Vector2f size, std::function<void()> callback = nullptr);
         void draw(sf::RenderWindow& window);
-        bool handleClick(sf::Vector2f mousePos);
+        int handleClick(sf::Vector2f mousePos);
     };
 }
 
